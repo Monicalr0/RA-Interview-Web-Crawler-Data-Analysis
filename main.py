@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-# import requests
 import csv
 
 URL = "https://stackoverflow.com/questions?"  # Default URL to scrape questions
@@ -87,7 +86,7 @@ def scrape(tag=""):
     """
     questions = []
     for i in range(1, CURR_PAGE_LIMIT + 1):
-        questions.extend(scrape_page(1, tag))
+        questions.extend(scrape_page(i, tag))
     return questions
 
 
