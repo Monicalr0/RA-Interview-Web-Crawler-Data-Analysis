@@ -189,17 +189,6 @@ One more thing: can I also use it to log in to remote desktops?
 ",167k,"
             23
         ","['\nFrom the term ""automatic login"" I suppose security (password protection) is not of key importance here.\nThe guidelines for solution could be to use a JavaScript bookmark (idea borrowed form a nice game published on M&M\'s DK site).\nThe idea is to create a javascript file and store it locally. It should do the login data entering depending on current site address. Just an example using jQuery:\n// dont forget to include jQuery code\n// preferably with .noConflict() in order not to break the site scripts\nif (window.location.indexOf(""mail.google.com"") > -1) {\n    // Lets login to Gmail\n    jQuery(""#Email"").val(""youremail@gmail.com"");\n    jQuery(""#Passwd"").val(""superSecretPassowrd"");\n    jQuery(""#gaia_loginform"").submit();\n}\n\nNow save this as say login.js\nThen create a bookmark (in any browser) with this (as an) url:\njavascript:document.write(""<script type=\'text/javascript\' src=\'file:///path/to/login.js\'></script>"");\n\nNow when you go to Gmail and click this bookmark you will get automatically logged in by your script.\nMultiply the code blocks in your script, to add more sites in the similar manner. You could even combine it with window.open(...) functionality to open more sites, but that may get the script inclusion more complicated.\nNote: This only illustrates an idea and needs lots of further work, it\'s not a complete solution.\n', '\nThe code below does just that.  The below is a working example to log into a game.  I made a similar file to log in into Yahoo and a kurzweilai.net forum.\nJust copy the login form from any webpage\'s source code. Add value= ""your user name"" and value = ""your password"".  Normally the -input- elements in the source code do not have the value attribute, and sometime, you will see something like that:  value="""" \nSave the file as a html on a local machine double click it, or make a bat/cmd file to  launch and close them as required.\n    <!doctype html>\n    <!-- saved from url=(0014)about:internet -->\n\n    <html>\n    <title>Ikariam Autologin</title>\n    </head>\n    <body>\n    <form id=""loginForm"" name=""loginForm"" method=""post""    action=""http://s666.en.ikariam.com/index.php?action=loginAvatar&function=login"">\n    <select name=""uni_url"" id=""logServer"" class=""validate[required]"">\n    <option  class=""""  value=""s666.en.ikariam.com"" fbUrl=""""  cookieName=""""  >\n            Test_en\n    </option>\n    </select>\n    <input id=""loginName"" name=""name"" type=""text"" value=""PlayersName"" class="""" />\n    <input id=""loginPassword"" name=""password"" type=""password"" value=""examplepassword"" class="""" />\n    <input type=""hidden"" id=""loginKid"" name=""kid"" value=""""/>\n                        </form>\n  <script>document.loginForm.submit();</script>       \n  </body></html>\n\nNote that -script- is just -script-. I found there is no need to specify that is is JavaScript. It works anyway. I also found out that a bare-bones version that contains just two input filds: userName and password also work. But I left a hidded input field etc. just in case.  Yahoo mail has a lot of hidden fields. Some are to do with password encryption, and it counts login attempts.\nSecurity warnings and other staff, like Mark of the Web to make it work smoothly in IE are explained here:\nhttp://happy-snail.webs.com/autologinintogames.htm\n', '\nI used @qwertyjones\'s answer to automate logging into Oracle Agile with a public password.\nI saved the login page as index.html, edited all the href= and action= fields to have the full URL to the Agile server.\nThe key <form> line needed to change from\n<form autocomplete=""off"" name=""MainForm"" method=""POST""\n action=""j_security_check"" \n onsubmit=""return false;"" target=""_top"">\n\nto\n<form autocomplete=""off"" name=""MainForm"" method=""POST""\n action=""http://my.company.com:7001/Agile/default/j_security_check""   \n onsubmit=""return false;"" target=""_top"">\n\nI also added this snippet to the end of the <body>\n<script>\nfunction checkCookiesEnabled(){ return true; }\ndocument.MainForm.j_username.value = ""joeuser"";\ndocument.MainForm.j_password.value = ""abcdef"";\nsubmitLoginForm();\n</script> \n\nI had to disable the cookie check by redefining the function that did the check, because I was hosting this from XAMPP and I didn\'t want to deal with it. The submitLoginForm() call was inspired by inspecting the keyPressEvent() function.\n', '\nYou can use Autohotkey, download it from: http://ahkscript.org/download/\nAfter the installation, if you want to open Gmail website when you press Alt+g, you can do something like this:\n!g::\nRun www.gmail.com \nreturn\n\nFurther reference: Hotkeys (Mouse, Joystick and Keyboard Shortcuts)\n', '\nWell, its true that we can use Vb Script for what you intended to do.\nWe can open an application through the code like Internet Explorer. We can navigate to site you intend for. Later we can check the element names of Text Boxes which require username and password; can set then and then Login. It works fine all of using code.\nNo manual interaction with the website. And eventually you will end up signing in by just double clicking the file.\nTo get you started :\nSet objIE = CreateObject(""InternetExplorer.Application"")\n\nCall objIE.Navigate(""https://gmail.com"")\n\nThis will open an instance of internet explore and navigate to gmail.\nRest you can learn and apply.\n']"
-"Python, mechanize, proper syntax for setting multiple headers?","
-I can't seem to find how to do this anywere, I am trying to set multiple headers with python's mechanize module, such as:
-br.addheaders = [('user-agent', '   Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.3) Gecko/20100423 Ubuntu/10.04 (lucid) Firefox/3.6.3')]
-br.addheaders = [('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]
-
-But it seems that it only takes the last br.addheaders.. so it only shows the 'accept' header, not the 'user-agent' header, which leads me to believe that each call to 'br.addheaders' overwrites any previous calls to this.. I can't figure the syntax to include 2 or more headers so I would greatly appreciate any help..
-I am using this website to test headers output:
-http://www.ericgiguere.com/tools/http-header-viewer.html
-",8k,"
-            8
-        ","[""\nAccording to http://wwwsearch.sourceforge.net/mechanize/doc.html#adding-headers, the syntax would be \nbr.addheaders = [('user-agent', '   Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.3) Gecko/20100423 Ubuntu/10.04 (lucid) Firefox/3.6.3'),\n('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]\n\nThat is, make a list of header tuples.\n""]"
 "Using Playwright for Python, how do I select (or find) an element?","
 I'm trying to learn the Python version of Playwright. See here
 I would like to learn how to locate an element, so that I can do
@@ -229,6 +218,17 @@ How can I do the same in Playwright?
 ",18k,"
             8
         ","['\nThe accepted answer does not work with the newer versions of Playwright. (Thanks @576i for pointing this out)\nHere is the Python code that works with the newer versions (tested with version 1.5):\nfrom playwright.sync_api import sync_playwright\n\nwith sync_playwright() as p:\n    browser = p.chromium.launch()\n    page = browser.new_page()\n    page.goto(\'http://whatsmyuseragent.org/\')\n    ua = page.query_selector("".user-agent"");\n    print(ua.inner_html())\n    browser.close()\n\nTo get only the text, use the inner_text() function.\nprint(ua.inner_text())\n\n', '\nYou can use the querySelector function, and then call the innerHTML function:\nhandle = page.querySelector("".user-agent"")\nprint(handle.innerHTML())\n\n', '\naccording to Latest official python version Playwright, you should use:\n\npage\'s query_selector\nand element\'s inner_html\n\n-> the code:\n# userAgentSelector = "".user-agent""\nuserAgentSelector = ""div.user-agent""\nelementHandle = page.query_selector(userAgentSelector)\nuaHtml = elementHandle.inner_html()\nprint(""uaHtml=%s"" % uaHtml)\n\n']"
+"Python, mechanize, proper syntax for setting multiple headers?","
+I can't seem to find how to do this anywere, I am trying to set multiple headers with python's mechanize module, such as:
+br.addheaders = [('user-agent', '   Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.3) Gecko/20100423 Ubuntu/10.04 (lucid) Firefox/3.6.3')]
+br.addheaders = [('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]
+
+But it seems that it only takes the last br.addheaders.. so it only shows the 'accept' header, not the 'user-agent' header, which leads me to believe that each call to 'br.addheaders' overwrites any previous calls to this.. I can't figure the syntax to include 2 or more headers so I would greatly appreciate any help..
+I am using this website to test headers output:
+http://www.ericgiguere.com/tools/http-header-viewer.html
+",8k,"
+            8
+        ","[""\nAccording to http://wwwsearch.sourceforge.net/mechanize/doc.html#adding-headers, the syntax would be \nbr.addheaders = [('user-agent', '   Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.3) Gecko/20100423 Ubuntu/10.04 (lucid) Firefox/3.6.3'),\n('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]\n\nThat is, make a list of header tuples.\n""]"
 Execute javascript trough Internet Explorer's com interface using PowerShell,"
 I am writing some Internet Explorer automation scripts using PowerShell. Here is how I start the IE com object:
 $ie = New-Object -com ""InternetExplorer.Application""
@@ -763,7 +763,7 @@ const puppeteer = require('puppeteer');
 
 This is what I want. Dataset -> Location type -> State Alaska. Instead the code keeps selecting only in the Dataset table.
 
-",839,"
+",840,"
             1
         ","['\nThe problem you have there is that CSS transitions are preventing you from clicking those elements. One possible solution would be disabling all CSS animations on the page.\nYou can add that after the goto call: \n\nawait page.addStyleTag({ content : `\n    *,\n    *::after,\n    *::before {\n        transition-delay: 0s !important;\n        transition-duration: 0s !important;\n        animation-delay: -0.0001s !important;\n        animation-duration: 0s !important;\n        animation-play-state: paused !important;\n        caret-color: transparent !important;\n    }`})\n\n\n']"
 Using internetexplorer object what is the correct way to wait for an ajax response?,"
@@ -1068,20 +1068,6 @@ Error details:
 ",3k,"
             4
         ","[""\nThis error message...\n'WebDriver' object has no attribute 'switch_to_window'\n\n...implies that the WebDriver object no more supports the attribute switch_to_window()\n\nswitch_to_window\nswitch_to_window was deprecated in Selenium v2.41 :\n\nSelenium 2.41\n\ndeprecating switch_to_* in favour of driver.switch_to.*\n\n\nHence you see the error.\n\nSolution\nInstead of switch_to_window you need to use switch_to.\nExamples:\n\ndriver.switch_to.active_element\ndriver.switch_to.alert\ndriver.switch_to.default_content()\ndriver.switch_to.frame()\ndriver.switch_to.parent_frame()\ndriver.switch_to.window('main')\n\n""]"
-jbehave + thucydides: how to override 300s timeout,"
-I'm using thucydides jbehave plugin to run Selenium tests. However, I can't run tests longer than 5 min in total due to jbehave timeout. I can't figure out how can thucydides/jbehave should be configured to override this limitation. Selenium tests use to be longer that 5 mins, so that should be an actual problem for many people.
-",5k,"
-            3
-        ","['\nTo override the timeout the user should add thucydides.properties file to the main folder of the project (if you use thucidides jbehave archetype, there is no such file by default). \nset, for instance, story.timeout.in.secs=3000 and save the file. the timeout parameter will be overriden\n', '\nTo overide the timeout we can use the following :\n @Override\n        public Embedder configuredEmbedder(){\n\nStoryTimeouts.TimeoutParser t=new StoryTimeouts.TimeoutParser() {\n                @Override\n                public boolean isValid(String timeout) {\n                    return true;\n                }\n\n                @Override\n                public long asSeconds(String timeout) {\n                    return 500; <--- Storytimeout \n                }\n            };\n\n            embedder.useTimeoutParsers(t);\n}\n\n']"
-Controlling a web browser using Excel VBA,"
-I have been assigned the task of automating a web based task ( for a HTTPS website). The users currently are filling in the Excel sheet with the data, they now want to automate excel in such a way that it directly controls the browser and fills in the data.
-I found the iMacros Scripting edition as a possible solution for doing this, I wanted to know if there are any other similar tools which can be used for controlling the browser and filling in data.
-I also had a look at the Selenium Client Driver, but I am not sure on how to use it in Excel VBA.
-Any help would be appreciated.
-Thanks,
-",25k,"
-            3
-        ","['\nYou can use Selenium from Visual Basic Editor by installing the tools provided here :\nhttp://code.google.com/p/selenium-vba/\nThere is a Selenium IDE plugin to automatically record a script in VBA and an installation package to run Selenium command in Visual Basic Editor.\nThe following example starts firefox, opens links in the 1st column, compares the title with the 2nd column and past the result in the 3rd column.\nUsed data are in a sheet, in a range named ""MyValues"".\nPublic Sub TC002()\n   Dim selenium As New SeleniumWrapper.WebDriver, r As Range\n   selenium.Start ""firefox"", ""http://www.google.com"" \n   For Each r In Range(""MyValues"").Rows\n     selenium.open r.Cells(, 1)\n     selenium.waitForNotTitle """"\n     r.Cells(, 3) = selenium.verifyTitle(r.Cells(, 2))\n   Next\n   selenium.stop\nEnd Sub\n\n', '\nThis sample open stackoverflow site an show IE\nSub OpenIE()\n\'officevb.com\nDim ie As Object\nSet ie = CreateObject(""InternetExplorer.Application"")\n\nie.Navigate ""http://www.stackowerflow.com""\n\n \'wait load\n While ie.ReadyState <> READYSTATE_COMPLETE\n  DoEvents\n Wend\n\nie.Visible = True\n\nEnd Sub\n\n[]\'s\n', '\nI use this code for reading data from excel and passin it to selenium for to do task like ""click, select, close etc"" and also you can write data to excel.\nThis is in python i don know VB and i do know perl if u wish i\'ll give same code in perl too.\ni hop this may help.\nfrom xlwt import Workbook\n\nimport xlrd\n\ntestconfigfilename=""testconfig.xls""\n\n    if (len(sys.argv) > 1):\n\n        testconfigfilename=sys.argv[1]       \n\n    wb = xlrd.open_workbook(testconfigfilename);\n\n    wb.sheet_names();\n\n    sh = wb.sheet_by_index(0); \'Sheet 0 - selenium server configuration\'\n\n\n\n    seleniumHost = sh.cell(1,0).value\n\n    seleniumPort = int(sh.cell(1,1).value)\n\n    testBaseURL = sh.cell(1,2).value\n\n    browser = sh.cell(1,3).value\n\n    timeout = int(sh.cell(1,4).value)\n\n    path = sh.cell(1,5).value\n\noutputwb = Workbook()\n\n    outputsheet = outputwb.add_sheet(""result"",cell_overwrite_ok=True) #get the first sheet in the result xls \n\noutputsheet.write(RowNumber,colNumber,""data"")\n\n']"
 Puppeteer Get all data attribute values,"
 My html doc is
 <div class=""inner-column"">
@@ -1116,20 +1102,20 @@ I search for a name, and that particular name is in row number X, how can I get 
 ",9k,"
             3
         ","['\nYou can use .find to solve both of your cases.\nTo get the table row count:\n  cy.get(""#tableID"")\n    .find(""tr"")\n    .then((row) => {\n      //row.length will give you the row count\n      cy.log(row.length);\n    });\n\nTo get the value ( index ) of the particular row, you can do something like this.\n  cy.get(""#Table Id"")\n    .find(""tr"")\n    .then((rows) => {\n      rows.toArray().forEach((element) => {\n        if (element.innerHTML.includes(""Your Value"")) {\n        //rows.index(element) will give you the row index\n          cy.log(rows.index(element));\n        }\n      });\n    });\n\nAdditional tip: If you want to select a specific table cell containing a value, you can do this:\n  cy.get(""#customers"").find(""tr"").find(""td"").contains(""Germany"");\n\nNote: to get the table row index there can be many other alternative ways. Hope you will figure them out on the go.\n']"
-how to use edgeDriver with qaf,"
-I use below properties to run edge browser, but it doesn't work.
-webdriver.edge.driver=src/main/resources/common/msedgedriver.exe
-driver.name=edgeDriver
-
-How can I use edge browser?
-",568,"
-            2
-        ","['\nIn order to set driver executable, you need to set value using appropriate system property for the driver. You can set system property either at the time of execution using -Dpropertyname=value or through code.  If you are using qaf, it provides feature to set system property through property file. For that purpose you need to add system prefix with property name. For example:\nsystem.webdriver.edge.driver=src/main/resources/common/msedgedriver.exe\n', '\nAccording to the doc https://qmetry.github.io/qaf/latest/how_to_use_driver.html and check the UiDriverFactory.java in com.qmetry.qaf.automation.ui of qaf, it looks qaf not support this.\n']"
-How do I switch to new tab or window in playwright-java?,"
-How can we switch to a new window that has opened while running test, and how can I get back to the parent window in playwright-java?
-",3k,"
-            2
-        ","['\nThere is no Switch action like Selenium. You can use the waitForPage or waitForPopup functions. You just need to know what is the action triggering that new page. e.g.\nPage popup = context.waitForPage(() -> page.click(""a""));\n\nThe context class also has a pages() function, which returns all the open pages.\n', ""\nexpanding on @hardkoded's answer, I got an error and am now using this:\ncontext.waitForEvent('page')\n\nworks for my purposes so far\n"", '\nWhat you want to do is continue your test in a new page. The official docs: https://playwright.dev/docs/pages#handling-new-pages\nHere is an example where we first work in the initial ""page"" and then, after clicking a button we want to continue our tests in a new tab we define as ""newPage"":\n        // Here we are working in the initial page\n        await page.locator(""#locator"").type(""This happens in the initial page.."");\n\n        /*  When ""Ok"" is clicked the test waits for a new page event and assigns to new page object to a variable called newPage\n            After this point we want the test to continue in the new tab,\n            so we\'ll have to use the newly defined newPage variable when working on that tab\n        */\n        const [newPage] = await Promise.all([\n            context.waitForEvent(\'page\'),\n            page.locator(""span >> text=Ok"").click()\n            \n        ])\n        await newPage.waitForLoadState();\n\n        console.log(""A new tab opened and the url of the tab is: "" + newPage.url());\n\n        // Here we work with the newPage object and we can perform actions like with page\n        await newPage.locator(""#Description"").type(""This happens in a new tab!"");\n\n']"
+Controlling a web browser using Excel VBA,"
+I have been assigned the task of automating a web based task ( for a HTTPS website). The users currently are filling in the Excel sheet with the data, they now want to automate excel in such a way that it directly controls the browser and fills in the data.
+I found the iMacros Scripting edition as a possible solution for doing this, I wanted to know if there are any other similar tools which can be used for controlling the browser and filling in data.
+I also had a look at the Selenium Client Driver, but I am not sure on how to use it in Excel VBA.
+Any help would be appreciated.
+Thanks,
+",25k,"
+            3
+        ","['\nYou can use Selenium from Visual Basic Editor by installing the tools provided here :\nhttp://code.google.com/p/selenium-vba/\nThere is a Selenium IDE plugin to automatically record a script in VBA and an installation package to run Selenium command in Visual Basic Editor.\nThe following example starts firefox, opens links in the 1st column, compares the title with the 2nd column and past the result in the 3rd column.\nUsed data are in a sheet, in a range named ""MyValues"".\nPublic Sub TC002()\n   Dim selenium As New SeleniumWrapper.WebDriver, r As Range\n   selenium.Start ""firefox"", ""http://www.google.com"" \n   For Each r In Range(""MyValues"").Rows\n     selenium.open r.Cells(, 1)\n     selenium.waitForNotTitle """"\n     r.Cells(, 3) = selenium.verifyTitle(r.Cells(, 2))\n   Next\n   selenium.stop\nEnd Sub\n\n', '\nThis sample open stackoverflow site an show IE\nSub OpenIE()\n\'officevb.com\nDim ie As Object\nSet ie = CreateObject(""InternetExplorer.Application"")\n\nie.Navigate ""http://www.stackowerflow.com""\n\n \'wait load\n While ie.ReadyState <> READYSTATE_COMPLETE\n  DoEvents\n Wend\n\nie.Visible = True\n\nEnd Sub\n\n[]\'s\n', '\nI use this code for reading data from excel and passin it to selenium for to do task like ""click, select, close etc"" and also you can write data to excel.\nThis is in python i don know VB and i do know perl if u wish i\'ll give same code in perl too.\ni hop this may help.\nfrom xlwt import Workbook\n\nimport xlrd\n\ntestconfigfilename=""testconfig.xls""\n\n    if (len(sys.argv) > 1):\n\n        testconfigfilename=sys.argv[1]       \n\n    wb = xlrd.open_workbook(testconfigfilename);\n\n    wb.sheet_names();\n\n    sh = wb.sheet_by_index(0); \'Sheet 0 - selenium server configuration\'\n\n\n\n    seleniumHost = sh.cell(1,0).value\n\n    seleniumPort = int(sh.cell(1,1).value)\n\n    testBaseURL = sh.cell(1,2).value\n\n    browser = sh.cell(1,3).value\n\n    timeout = int(sh.cell(1,4).value)\n\n    path = sh.cell(1,5).value\n\noutputwb = Workbook()\n\n    outputsheet = outputwb.add_sheet(""result"",cell_overwrite_ok=True) #get the first sheet in the result xls \n\noutputsheet.write(RowNumber,colNumber,""data"")\n\n']"
+jbehave + thucydides: how to override 300s timeout,"
+I'm using thucydides jbehave plugin to run Selenium tests. However, I can't run tests longer than 5 min in total due to jbehave timeout. I can't figure out how can thucydides/jbehave should be configured to override this limitation. Selenium tests use to be longer that 5 mins, so that should be an actual problem for many people.
+",5k,"
+            3
+        ","['\nTo override the timeout the user should add thucydides.properties file to the main folder of the project (if you use thucidides jbehave archetype, there is no such file by default). \nset, for instance, story.timeout.in.secs=3000 and save the file. the timeout parameter will be overriden\n', '\nTo overide the timeout we can use the following :\n @Override\n        public Embedder configuredEmbedder(){\n\nStoryTimeouts.TimeoutParser t=new StoryTimeouts.TimeoutParser() {\n                @Override\n                public boolean isValid(String timeout) {\n                    return true;\n                }\n\n                @Override\n                public long asSeconds(String timeout) {\n                    return 500; <--- Storytimeout \n                }\n            };\n\n            embedder.useTimeoutParsers(t);\n}\n\n']"
 Python Selenium - What are possible keys in FireFox webdriver profile preferences,"
 I couldn't really find this information anywhere, I am looking for a list of possible keys that can be used in the profile.set_preference() API.
 Here is some context:
@@ -1143,6 +1129,15 @@ Now, if I want to, say specify a client SSL, I need to configure that as a prefe
 ",2k,"
             2
         ","[""\nYou can look at profile.DEFAULT_PREFERENCES which is the json at python2.7/site-packages/selenium/webdriver/firefox/webdriver_prefs.json\n{u'frozen': {u'app.update.auto': False,\n  u'app.update.enabled': False,\n  u'browser.EULA.3.accepted': True,\n  u'browser.EULA.override': True,\n  u'browser.displayedE10SNotice': 4,\n  u'browser.download.manager.showWhenStarting': False,\n  u'browser.link.open_external': 2,\n  u'browser.link.open_newwindow': 2,\n  u'browser.offline': False,\n  u'browser.reader.detectedFirstArticle': True,\n  u'browser.safebrowsing.enabled': False,\n  u'browser.safebrowsing.malware.enabled': False,\n  u'browser.search.update': False,\n  u'browser.selfsupport.url': u'',\n  u'browser.sessionstore.resume_from_crash': False,\n  u'browser.shell.checkDefaultBrowser': False,\n  u'browser.tabs.warnOnClose': False,\n  u'browser.tabs.warnOnOpen': False,\n  u'datareporting.healthreport.logging.consoleEnabled': False,\n  u'datareporting.healthreport.service.enabled': False,\n  u'datareporting.healthreport.service.firstRun': False,\n  u'datareporting.healthreport.uploadEnabled': False,\n  u'datareporting.policy.dataSubmissionEnabled': False,\n  u'datareporting.policy.dataSubmissionPolicyAccepted': False,\n  u'devtools.errorconsole.enabled': True,\n  u'dom.disable_open_during_load': False,\n  u'extensions.autoDisableScopes': 10,\n  u'extensions.blocklist.enabled': False,\n  u'extensions.logging.enabled': True,\n  u'extensions.update.enabled': False,\n  u'extensions.update.notifyUser': False,\n  u'javascript.enabled': True,\n  u'network.http.phishy-userpass-length': 255,\n  u'network.manage-offline-status': False,\n  u'offline-apps.allow_by_default': True,\n  u'prompts.tab_modal.enabled': False,\n  u'security.csp.enable': False,\n  u'security.fileuri.origin_policy': 3,\n  u'security.fileuri.strict_origin_policy': False,\n  u'security.warn_entering_secure': False,\n  u'security.warn_entering_secure.show_once': False,\n  u'security.warn_entering_weak': False,\n  u'security.warn_entering_weak.show_once': False,\n  u'security.warn_leaving_secure': False,\n  u'security.warn_leaving_secure.show_once': False,\n  u'security.warn_submit_insecure': False,\n  u'security.warn_viewing_mixed': False,\n  u'security.warn_viewing_mixed.show_once': False,\n  u'signon.rememberSignons': False,\n  u'toolkit.networkmanager.disable': True,\n  u'toolkit.telemetry.enabled': False,\n  u'toolkit.telemetry.prompted': 2,\n  u'toolkit.telemetry.rejected': True},\n u'mutable': {u'browser.dom.window.dump.enabled': True,\n  u'browser.newtab.url': u'about:blank',\n  u'browser.newtabpage.enabled': False,\n  u'browser.startup.homepage': u'about:blank',\n  u'browser.startup.page': 0,\n  u'dom.max_chrome_script_run_time': 30,\n  u'dom.max_script_run_time': 30,\n  u'dom.report_all_js_exceptions': True,\n  u'javascript.options.showInConsole': True,\n  u'network.http.max-connections-per-server': 10,\n  u'startup.homepage_welcome_url': u'about:blank',\n  u'webdriver_accept_untrusted_certs': True,\n  u'webdriver_assume_untrusted_issuer': True}}\n\n"", '\nI usually just open about:config and search the list of preferences there. There is also this helpful resource which documents part of the preferences.\n']"
+how to use edgeDriver with qaf,"
+I use below properties to run edge browser, but it doesn't work.
+webdriver.edge.driver=src/main/resources/common/msedgedriver.exe
+driver.name=edgeDriver
+
+How can I use edge browser?
+",568,"
+            2
+        ","['\nIn order to set driver executable, you need to set value using appropriate system property for the driver. You can set system property either at the time of execution using -Dpropertyname=value or through code.  If you are using qaf, it provides feature to set system property through property file. For that purpose you need to add system prefix with property name. For example:\nsystem.webdriver.edge.driver=src/main/resources/common/msedgedriver.exe\n', '\nAccording to the doc https://qmetry.github.io/qaf/latest/how_to_use_driver.html and check the UiDriverFactory.java in com.qmetry.qaf.automation.ui of qaf, it looks qaf not support this.\n']"
 Selenium Chrome WebDriver how to scroll horizontally,"
 Chrome web driver has a limitation that only loads webpage content that is in view. I have a website that has long horizontal table. I have Xpath that extracts column headers of a table that stretches more than the screen width. In chrome dev tool console if I run the xpath $x(myxpathgoeshere) I get all the headers including the ones that are not in view(the one that makes you scroll to see all). So I know my xpath is correct. But in code, when I access it by using selenium webdriver it only gives header names that are in current view. I came across various posts on chrome webdriver google group page, users mentioning this limitation and answer to it was to not fix it. So anyways, now I am trying to make it work using javascript to scroll horizontally and then do the findelement by xpath again to see if the elements to the right are loaded. But for some strange reason I cannot seem to get the scrolling horizontally to work. I am using C# Javascript executor.
 IJavaScriptExecutor js = (IJavaScriptExecutor) Driver;
@@ -1153,6 +1148,11 @@ Edited: forgot that I was using X for horizontal not Y
 ",8k,"
             2
         ","['\nfor this type of issue i had use browser zoom-in and zoom-out functionality but i am using this in java. With java robot class i am doing browser zoom-out so i automatically shows the hidden column. you can try that it may help you. \n', '\nChange the code: \njs.ExecuteScript(""scrollTo(3000,0);"");\n\nto\njs.ExecuteScript(""scroll(3000,0);"");\n\nSimply, it\'s not scrollTo and scroll only.\n']"
+How do I switch to new tab or window in playwright-java?,"
+How can we switch to a new window that has opened while running test, and how can I get back to the parent window in playwright-java?
+",3k,"
+            2
+        ","['\nThere is no Switch action like Selenium. You can use the waitForPage or waitForPopup functions. You just need to know what is the action triggering that new page. e.g.\nPage popup = context.waitForPage(() -> page.click(""a""));\n\nThe context class also has a pages() function, which returns all the open pages.\n', ""\nexpanding on @hardkoded's answer, I got an error and am now using this:\ncontext.waitForEvent('page')\n\nworks for my purposes so far\n"", '\nWhat you want to do is continue your test in a new page. The official docs: https://playwright.dev/docs/pages#handling-new-pages\nHere is an example where we first work in the initial ""page"" and then, after clicking a button we want to continue our tests in a new tab we define as ""newPage"":\n        // Here we are working in the initial page\n        await page.locator(""#locator"").type(""This happens in the initial page.."");\n\n        /*  When ""Ok"" is clicked the test waits for a new page event and assigns to new page object to a variable called newPage\n            After this point we want the test to continue in the new tab,\n            so we\'ll have to use the newly defined newPage variable when working on that tab\n        */\n        const [newPage] = await Promise.all([\n            context.waitForEvent(\'page\'),\n            page.locator(""span >> text=Ok"").click()\n            \n        ])\n        await newPage.waitForLoadState();\n\n        console.log(""A new tab opened and the url of the tab is: "" + newPage.url());\n\n        // Here we work with the newPage object and we can perform actions like with page\n        await newPage.locator(""#Description"").type(""This happens in a new tab!"");\n\n']"
 How to add wait / Delay until web page is fully loaded in Automation Anywhere?,"
 I want to know 'How to add wait or Delay until webpage is fully loaded,' in automations anywhere,
 I used 
@@ -1165,6 +1165,27 @@ sorry for the bad English.
 ",8k,"
             1
         ","['\nUsually, a website is ""loaded"" or ""ready"" before the actual content is loaded. Some websites even have dummy content which is replaced once the actual content is retrieved from \'somewhere\'. Hence waiting for the screen to change is not a good idea. \nMy approach is to pick an element which you know is loaded after the element you want to interact with. For instance the navigation bar on this website is loaded before the comments are. You can either figure out which element to use by looking at the source of the website by right-clicking anywhere and selecting view source or by simply refreshing the page a couple of times and eye-balling it. The former requires some HTML knowledge, but is a better approach in my opinion.\nOnce you\'ve identified your element, use Object Cloning on said element and use the built-in wait as a delay (usually set to 15 sec, depending on the website/connection). The Action should be some random get property (store whatever you retrieve in some dummy variable as we\'re not going to use it anyway).\nObject Cloning\'s wait function polls every so many milliseconds and once the element is found it will almost instantaneously go to the next line in the code. This is where you interact with your target element. \nThis way you know your target element is loaded and the code is very optimized and robust.\nOn a final note: It\'s usually a good idea to surround this with some exception handling as automating websites is prone to errors.\n', '\nA very simple solution is to run your automation while watching and determine the amount of time it takes for the webpage to load. You can add a Delay rather than a wait if you know the page is generally loaded within 30 seconds or so. \n']"
+Unable to capture response.json() in playwright,"
+I am trying to capture json response using playwright. I keep on getting Promise pending. However under headless:false mode i can see the data is being received and populated on the browser. I have just started playing with Playwright and also not very familiar with ""Promise"".
+What i have tried is as below:
+(async () => {
+        let browser = await firefox.launch({headless: true, userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'});
+        let page = await browser.newPage();
+        page.waitForResponse(async(response) => {
+            if (response.url().includes('/abcd') && response.status() == 200) {
+                let resp = await response.json();
+                console.log(resp);
+            }
+        });
+        await page.goto('https://myurl.com', {waitUntil: 'networkidle', timeout: 30000});
+        await page.waitForTimeout(20000);
+        await browser.close();
+})
+
+What am i doing wrong? I have tried increasing timeout. Doesnot help.
+",5k,"
+            1
+        ","[""\nThe waitForResponse won't handle your async function. You could do something like this:\n(async () => {\n  let browser = await firefox.launch({headless: true, userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'});\n  let page = await browser.newPage();\n  const promise page.waitForResponse(/abcd/); // This is a regex to match the url\n  await page.goto('https://myurl.com', {waitUntil: 'networkidle', timeout: 30000});\n  var response = await promise; // here we wait for the promise to be fullfiled. \n  let resp = await response.json();\n  console.log(resp);\n  await browser.close();\n})\n\n""]"
 How to get a specific frame in a web page and retrieve its content,"
 I wanted to access the translation results of the following url 
 
@@ -1190,27 +1211,6 @@ but it does not work in the above example. It returns an empty page .
 ",11k,"
             1
         ","['\nYou can use driver.switchTo.frame(1); here, the digit 1 inside frame() is the index of frames present in the webpage. as your requirement is to switch to second frame and the index starts with 0, you should use driver.switchTo.frame(1);\nBut the above code is in Java. In Python, you can use the below line.\ndriver.switch_to_frame(1);\n\nUPDATE\n driver.get(""http://translate.google.com/translate?hl=en&sl=en&tl=ar&u=http://www.saltycrane.com/blog/2008/10/how-escape-percent-encode-url-python/"");\n driver.switchTo().frame(0);\n System.out.println(driver.findElement(By.xpath(""/html/body/div/div/div[3]/h1/span/a"")).getText());\n\nOutput: SaltyCrane ???????\nI have just tried to print the title name SaltCrane that is present inside the iframe.\nIt worked for me except for the ? symbols after the SaltCrane. As it was arabic, it was unable to decode the same.\nThe above code is in Java. Same logic should also work in Python.\n', ""\nSelenium provides a method where you can do that.\nframe = browser.find_element_by_tag_name('iframe')\nbrowser.switch_to_frame(frame)\n# get page source\nbrowser.page_source\n\n""]"
-Unable to capture response.json() in playwright,"
-I am trying to capture json response using playwright. I keep on getting Promise pending. However under headless:false mode i can see the data is being received and populated on the browser. I have just started playing with Playwright and also not very familiar with ""Promise"".
-What i have tried is as below:
-(async () => {
-        let browser = await firefox.launch({headless: true, userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'});
-        let page = await browser.newPage();
-        page.waitForResponse(async(response) => {
-            if (response.url().includes('/abcd') && response.status() == 200) {
-                let resp = await response.json();
-                console.log(resp);
-            }
-        });
-        await page.goto('https://myurl.com', {waitUntil: 'networkidle', timeout: 30000});
-        await page.waitForTimeout(20000);
-        await browser.close();
-})
-
-What am i doing wrong? I have tried increasing timeout. Doesnot help.
-",5k,"
-            1
-        ","[""\nThe waitForResponse won't handle your async function. You could do something like this:\n(async () => {\n  let browser = await firefox.launch({headless: true, userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'});\n  let page = await browser.newPage();\n  const promise page.waitForResponse(/abcd/); // This is a regex to match the url\n  await page.goto('https://myurl.com', {waitUntil: 'networkidle', timeout: 30000});\n  var response = await promise; // here we wait for the promise to be fullfiled. \n  let resp = await response.json();\n  console.log(resp);\n  await browser.close();\n})\n\n""]"
 Multi-threaded C# Selenium WebDriver automation with Uris not known beforehand,"
 I need to perform some simultaneous webdrivers manipulation, but I am uncertain as to how to do this.
 What I am asking here is: 
@@ -1471,6 +1471,26 @@ I don't know much but i'm guessing me clicking into another box is activiating s
 ",341,"
             1
         ","[""\nWelcome to SO. There are different option to get the associated events.\nLet's take the stackoverflow search box (the one which is on the top with s-input js-search-field class)\n1) Using getEventListeners\nGo to chrome console in the dev tools and then use getEventListeners(element). \n\ngetEventListeners(document.querySelector('.s-input.js-search-field '))\n\n\n2) Using Dev Tools Event Listner\nGo to chrome dev tools and select the element for which you want to know the events, click on the Event Listeners tab on the right hand side pane.\n   \n3) Using the firefox event \nGoto dev tools in firefox and click on events bubble at the end of html element tag. \n    \n"", '\nSample of code\nI consulted with a friend who showed me the problem was an onblur event triggered by clicking away. \nThe solution to my problem was to call the event using the following line, \n{\n  ""Command"": ""storeEval"",\n  ""Target"": ""lawformTextBlur(document.getElementById(\'_f4\'))"",\n  ""Value"": """"\n},\n\n']"
+puppeteer wait for page/DOM updates - respond to new items that are added after initial loading,"
+I want to use Puppeteer to respond to page updates.
+The page shows items and when I leave the page open new items can appear over time.
+E.g. every 10 seconds a new item is added.
+I can use the following to wait for an item on the initial load of the page:
+await page.waitFor("".item"");
+console.log(""the initial items have been loaded"")
+
+How can I wait for / catch future items?
+I would like to achieve something like this (pseudo code):
+await page.goto('http://mysite');
+await page.waitFor("".item"");
+// check items (=these initial items)
+
+// event when receiving new items:
+// check item(s) (= the additional [or all] items)
+
+",7k,"
+            5
+        ","['\nYou can use exposeFunction to expose a local function:\nawait page.exposeFunction(\'getItem\', function(a) {\n    console.log(a);\n});\n\nThen you can use page.evaluate to create an observer and listen to new nodes created inside a parent node.\nThis example scrapes (it\'s just an idea, not a final work) the python chat in Stack Overflow, and prints new items being created in that chat.\nvar baseurl =  \'https://chat.stackoverflow.com/rooms/6/python\';\nconst browser = await puppeteer.launch({headless: false});\nconst page = await browser.newPage();\nawait page.goto(baseurl);\n\nawait page.exposeFunction(\'getItem\', function(a) {\n    console.log(a);\n});\n\nawait page.evaluate(() => {\n    var observer = new MutationObserver((mutations) => { \n        for(var mutation of mutations) {\n            if(mutation.addedNodes.length) {\n                getItem(mutation.addedNodes[0].innerText);\n            }\n        }\n    });\n    observer.observe(document.getElementById(""chat""), { attributes: false, childList: true, subtree: true });\n});\n\n', '\nAs an alternative to the excellent current answer which injects a MutationObserver using evaluate which forwards the data to an exposed Node function, Puppeteer offers a higher-level function called page.waitForFunction that blocks on an arbitrary predicate and uses either a MutationObserver or requestAnimationFrame under the hood to determine when to re-evaluate the predicate.\nCalling page.waitForFunction in a loop might add overhead since each new call involves registering a fresh observer or RAF. You\'d have to profile for your use case -- this isn\'t something I\'d worry much about prematurely, though.\nThat said, the RAF option may provide tighter latency than MO for the cost of some extra CPU cycles to poll constantly.\nHere\'s a minimal example on the following site that offers a periodically updating feed:\n\n\nconst wait = ms => new Promise(r => setTimeout(r, ms));\nconst r = (lo, hi) => ~~(Math.random() * (hi - lo) + lo);\n\nconst randomString = n =>\n  [...Array(n)].map(() => String.fromCharCode(r(97, 123))).join("""")\n;\n\n(async () => {\n  for (let i = 0; i < 500; i++) {\n    const el = document.createElement(""div"");\n    document.body.appendChild(el);\n    el.innerText = randomString(r(5, 15));\n    await wait(r(1000, 5000));\n  }\n})();\n\n\nconst puppeteer = require(""puppeteer"");\n\nconst html = `\n<html><body><div class=""container""></div><script>\nconst wait = ms => new Promise(r => setTimeout(r, ms));\nconst r = (lo, hi) => ~~(Math.random() * (hi - lo) + lo);\nconst randomString = n =>\n  [...Array(n)].map(() => String.fromCharCode(r(97, 123))).join("""")\n;\n(async () => {\n  for (;;) {\n    const el = document.createElement(""div"");\n    document.querySelector("".container"").appendChild(el);\n    el.innerText = randomString(r(5, 15));\n    await wait(r(1000, 5000));\n  }\n})();\n</script></body></html>\n`;\nlet browser;\n(async () => {\n  browser = await puppeteer.launch({headless: false});\n  const [page] = await browser.pages();\n  await page.setContent(html);\n  \n  for (;;) {\n    await page.waitForFunction((el, oldLength) =>\n      el.children.length > oldLength,                           // predicate\n      {polling: ""mutation"" /* or: ""raf"" */, timeout: 0},        // wFF options\n      await page.$("".container""),                               // elem to watch\n      await page.$eval("".container"", el => el.children.length), // oldLength\n    );\n    const selMostRecent = "".container div:last-child"";\n    console.log(await page.$eval(selMostRecent, el => el.textContent));\n  }\n})()\n  .catch(err => console.error(err))\n  .finally(() => browser?.close())\n;\n\nSee also:\n\nPass a function inside page.waitForFunction() with puppeteer which shows a generic waitForTextChange helper function that wraps page.waitForFunction.\nRealtime scrape a chat using Nodejs which aptly suggests the alternative approach of intercepting API responses as they populate the feed, when possible.\n\n']"
 element not interactable exception in selenium web automation,"
 In the below code i cannot send password keys in the password field, i tried clicking the field, clearing the field and sending the keys. But now working in any of the method. But its working if i debug and test
   public class TestMail {
@@ -1556,26 +1576,6 @@ I want to be able to access the username field, password field, and the login bu
 ",26k,"
             17
         ","['\nYou can get the iframe using contentFrame as you are doing now, and then call $.\nconst browser = await puppeteer.launch({ headless: false });\nconst page = await browser.newPage();\n\nawait page.goto(\'http://www.espn.com/login\')\n\nconst elementHandle = await page.waitForSelector(\'div#disneyid-wrapper iframe\');\nconst frame = await elementHandle.contentFrame();\nawait frame.waitForSelector(\'[ng-model=""vm.username""]\');\nconst username = await frame.$(\'[ng-model=""vm.username""]\');\nawait username.type(\'foo\');\nawait browser.close()\n\n\n', ""\nI had an issue with finding stripe elements. \nThe reason for that is the following: \n\nYou can't access an  with different origin using JavaScript, it would be a huge security flaw if you could do it. For the same-origin policy browsers block scripts trying to access a frame with a different origin. See more detailed answer here\n\nTherefore when I tried to use puppeteer's methods:Page.frames() and Page.mainFrame(). ElementHandle.contentFrame() I did not return any iframe to me. The problem is that it was happening silently and I couldn't figure out why it couldn't find anything.\nAdding these arguments to launch options solved the issue:\n\n '--disable-web-security',\n'--disable-features=IsolateOrigins,site-per-process'\n\n""]"
-puppeteer wait for page/DOM updates - respond to new items that are added after initial loading,"
-I want to use Puppeteer to respond to page updates.
-The page shows items and when I leave the page open new items can appear over time.
-E.g. every 10 seconds a new item is added.
-I can use the following to wait for an item on the initial load of the page:
-await page.waitFor("".item"");
-console.log(""the initial items have been loaded"")
-
-How can I wait for / catch future items?
-I would like to achieve something like this (pseudo code):
-await page.goto('http://mysite');
-await page.waitFor("".item"");
-// check items (=these initial items)
-
-// event when receiving new items:
-// check item(s) (= the additional [or all] items)
-
-",7k,"
-            5
-        ","['\nYou can use exposeFunction to expose a local function:\nawait page.exposeFunction(\'getItem\', function(a) {\n    console.log(a);\n});\n\nThen you can use page.evaluate to create an observer and listen to new nodes created inside a parent node.\nThis example scrapes (it\'s just an idea, not a final work) the python chat in Stack Overflow, and prints new items being created in that chat.\nvar baseurl =  \'https://chat.stackoverflow.com/rooms/6/python\';\nconst browser = await puppeteer.launch({headless: false});\nconst page = await browser.newPage();\nawait page.goto(baseurl);\n\nawait page.exposeFunction(\'getItem\', function(a) {\n    console.log(a);\n});\n\nawait page.evaluate(() => {\n    var observer = new MutationObserver((mutations) => { \n        for(var mutation of mutations) {\n            if(mutation.addedNodes.length) {\n                getItem(mutation.addedNodes[0].innerText);\n            }\n        }\n    });\n    observer.observe(document.getElementById(""chat""), { attributes: false, childList: true, subtree: true });\n});\n\n', '\nAs an alternative to the excellent current answer which injects a MutationObserver using evaluate which forwards the data to an exposed Node function, Puppeteer offers a higher-level function called page.waitForFunction that blocks on an arbitrary predicate and uses either a MutationObserver or requestAnimationFrame under the hood to determine when to re-evaluate the predicate.\nCalling page.waitForFunction in a loop might add overhead since each new call involves registering a fresh observer or RAF. You\'d have to profile for your use case -- this isn\'t something I\'d worry much about prematurely, though.\nThat said, the RAF option may provide tighter latency than MO for the cost of some extra CPU cycles to poll constantly.\nHere\'s a minimal example on the following site that offers a periodically updating feed:\n\n\nconst wait = ms => new Promise(r => setTimeout(r, ms));\nconst r = (lo, hi) => ~~(Math.random() * (hi - lo) + lo);\n\nconst randomString = n =>\n  [...Array(n)].map(() => String.fromCharCode(r(97, 123))).join("""")\n;\n\n(async () => {\n  for (let i = 0; i < 500; i++) {\n    const el = document.createElement(""div"");\n    document.body.appendChild(el);\n    el.innerText = randomString(r(5, 15));\n    await wait(r(1000, 5000));\n  }\n})();\n\n\nconst puppeteer = require(""puppeteer"");\n\nconst html = `\n<html><body><div class=""container""></div><script>\nconst wait = ms => new Promise(r => setTimeout(r, ms));\nconst r = (lo, hi) => ~~(Math.random() * (hi - lo) + lo);\nconst randomString = n =>\n  [...Array(n)].map(() => String.fromCharCode(r(97, 123))).join("""")\n;\n(async () => {\n  for (;;) {\n    const el = document.createElement(""div"");\n    document.querySelector("".container"").appendChild(el);\n    el.innerText = randomString(r(5, 15));\n    await wait(r(1000, 5000));\n  }\n})();\n</script></body></html>\n`;\nlet browser;\n(async () => {\n  browser = await puppeteer.launch({headless: false});\n  const [page] = await browser.pages();\n  await page.setContent(html);\n  \n  for (;;) {\n    await page.waitForFunction((el, oldLength) =>\n      el.children.length > oldLength,                           // predicate\n      {polling: ""mutation"" /* or: ""raf"" */, timeout: 0},        // wFF options\n      await page.$("".container""),                               // elem to watch\n      await page.$eval("".container"", el => el.children.length), // oldLength\n    );\n    const selMostRecent = "".container div:last-child"";\n    console.log(await page.$eval(selMostRecent, el => el.textContent));\n  }\n})()\n  .catch(err => console.error(err))\n  .finally(() => browser?.close())\n;\n\nSee also:\n\nPass a function inside page.waitForFunction() with puppeteer which shows a generic waitForTextChange helper function that wraps page.waitForFunction.\nRealtime scrape a chat using Nodejs which aptly suggests the alternative approach of intercepting API responses as they populate the feed, when possible.\n\n']"
 Accessing an element with no attributes in Watir,"
 Using Watir, is there a way to access an element without attributes?
 For example:
@@ -2188,7 +2188,7 @@ const puppeteer = require('puppeteer');
 
 This is what I want. Dataset -> Location type -> State Alaska. Instead the code keeps selecting only in the Dataset table.
 
-",839,"
+",840,"
             1
         ","['\nThe problem you have there is that CSS transitions are preventing you from clicking those elements. One possible solution would be disabling all CSS animations on the page.\nYou can add that after the goto call: \n\nawait page.addStyleTag({ content : `\n    *,\n    *::after,\n    *::before {\n        transition-delay: 0s !important;\n        transition-duration: 0s !important;\n        animation-delay: -0.0001s !important;\n        animation-duration: 0s !important;\n        animation-play-state: paused !important;\n        caret-color: transparent !important;\n    }`})\n\n\n']"
 Using internetexplorer object what is the correct way to wait for an ajax response?,"
@@ -2493,44 +2493,6 @@ Error details:
 ",3k,"
             4
         ","[""\nThis error message...\n'WebDriver' object has no attribute 'switch_to_window'\n\n...implies that the WebDriver object no more supports the attribute switch_to_window()\n\nswitch_to_window\nswitch_to_window was deprecated in Selenium v2.41 :\n\nSelenium 2.41\n\ndeprecating switch_to_* in favour of driver.switch_to.*\n\n\nHence you see the error.\n\nSolution\nInstead of switch_to_window you need to use switch_to.\nExamples:\n\ndriver.switch_to.active_element\ndriver.switch_to.alert\ndriver.switch_to.default_content()\ndriver.switch_to.frame()\ndriver.switch_to.parent_frame()\ndriver.switch_to.window('main')\n\n""]"
-Selenium 3.0.1 -interactive gives ParameterException: Unknown option: -interactive,"
-How to run selenum standanlone jar in interactive mode so that we can trigger commands from terminal. When I run as shown below exception occurs
-java -jar selenium-server-standalone-3.0.1.jar -interactive
-Exception in thread ""main"" com.beust.jcommander.ParameterException: Unknown option: -interactive
-    at com.beust.jcommander.JCommander.parseValues(JCommander.java:742)
-    at com.beust.jcommander.JCommander.parse(JCommander.java:282)
-    at com.beust.jcommander.JCommander.parse(JCommander.java:265)
-    at com.beust.jcommander.JCommander.<init>(JCommander.java:210)
-    at org.openqa.grid.selenium.GridLauncherV3$1.setConfiguration(GridLauncherV3.java:219)
-    at org.openqa.grid.selenium.GridLauncherV3.buildLauncher(GridLauncherV3.java:147)
-    at org.openqa.grid.selenium.GridLauncherV3.main(GridLauncherV3.java:73)
-
-However I am able to run version 2.48.2 in the above manner and it works fine.
-",5k,"
-            3
-        ","['\nstarting version 3, the selenium team changed the available configuration options (see an example configuration), as well as replaced the command line arguments parser to JCommander.\nthe implications are;\n\nsome options may not be available anymore, or their names have changed. looking at the V3 example configuration, it seems the support for -interactive has dropped.\nyou should specify all -D arguments first, i.e. right after the java command.\n\n']"
-How to get the total number of Rows in a table | Cypress,"
-
-I have a table with N rows. How can I get the total number of rows present in the table?
-I search for a name, and that particular name is in row number X, how can I get the value of that particular row.
-
-",9k,"
-            3
-        ","['\nYou can use .find to solve both of your cases.\nTo get the table row count:\n  cy.get(""#tableID"")\n    .find(""tr"")\n    .then((row) => {\n      //row.length will give you the row count\n      cy.log(row.length);\n    });\n\nTo get the value ( index ) of the particular row, you can do something like this.\n  cy.get(""#Table Id"")\n    .find(""tr"")\n    .then((rows) => {\n      rows.toArray().forEach((element) => {\n        if (element.innerHTML.includes(""Your Value"")) {\n        //rows.index(element) will give you the row index\n          cy.log(rows.index(element));\n        }\n      });\n    });\n\nAdditional tip: If you want to select a specific table cell containing a value, you can do this:\n  cy.get(""#customers"").find(""tr"").find(""td"").contains(""Germany"");\n\nNote: to get the table row index there can be many other alternative ways. Hope you will figure them out on the go.\n']"
-Controlling a web browser using Excel VBA,"
-I have been assigned the task of automating a web based task ( for a HTTPS website). The users currently are filling in the Excel sheet with the data, they now want to automate excel in such a way that it directly controls the browser and fills in the data.
-I found the iMacros Scripting edition as a possible solution for doing this, I wanted to know if there are any other similar tools which can be used for controlling the browser and filling in data.
-I also had a look at the Selenium Client Driver, but I am not sure on how to use it in Excel VBA.
-Any help would be appreciated.
-Thanks,
-",25k,"
-            3
-        ","['\nYou can use Selenium from Visual Basic Editor by installing the tools provided here :\nhttp://code.google.com/p/selenium-vba/\nThere is a Selenium IDE plugin to automatically record a script in VBA and an installation package to run Selenium command in Visual Basic Editor.\nThe following example starts firefox, opens links in the 1st column, compares the title with the 2nd column and past the result in the 3rd column.\nUsed data are in a sheet, in a range named ""MyValues"".\nPublic Sub TC002()\n   Dim selenium As New SeleniumWrapper.WebDriver, r As Range\n   selenium.Start ""firefox"", ""http://www.google.com"" \n   For Each r In Range(""MyValues"").Rows\n     selenium.open r.Cells(, 1)\n     selenium.waitForNotTitle """"\n     r.Cells(, 3) = selenium.verifyTitle(r.Cells(, 2))\n   Next\n   selenium.stop\nEnd Sub\n\n', '\nThis sample open stackoverflow site an show IE\nSub OpenIE()\n\'officevb.com\nDim ie As Object\nSet ie = CreateObject(""InternetExplorer.Application"")\n\nie.Navigate ""http://www.stackowerflow.com""\n\n \'wait load\n While ie.ReadyState <> READYSTATE_COMPLETE\n  DoEvents\n Wend\n\nie.Visible = True\n\nEnd Sub\n\n[]\'s\n', '\nI use this code for reading data from excel and passin it to selenium for to do task like ""click, select, close etc"" and also you can write data to excel.\nThis is in python i don know VB and i do know perl if u wish i\'ll give same code in perl too.\ni hop this may help.\nfrom xlwt import Workbook\n\nimport xlrd\n\ntestconfigfilename=""testconfig.xls""\n\n    if (len(sys.argv) > 1):\n\n        testconfigfilename=sys.argv[1]       \n\n    wb = xlrd.open_workbook(testconfigfilename);\n\n    wb.sheet_names();\n\n    sh = wb.sheet_by_index(0); \'Sheet 0 - selenium server configuration\'\n\n\n\n    seleniumHost = sh.cell(1,0).value\n\n    seleniumPort = int(sh.cell(1,1).value)\n\n    testBaseURL = sh.cell(1,2).value\n\n    browser = sh.cell(1,3).value\n\n    timeout = int(sh.cell(1,4).value)\n\n    path = sh.cell(1,5).value\n\noutputwb = Workbook()\n\n    outputsheet = outputwb.add_sheet(""result"",cell_overwrite_ok=True) #get the first sheet in the result xls \n\noutputsheet.write(RowNumber,colNumber,""data"")\n\n']"
-jbehave + thucydides: how to override 300s timeout,"
-I'm using thucydides jbehave plugin to run Selenium tests. However, I can't run tests longer than 5 min in total due to jbehave timeout. I can't figure out how can thucydides/jbehave should be configured to override this limitation. Selenium tests use to be longer that 5 mins, so that should be an actual problem for many people.
-",5k,"
-            3
-        ","['\nTo override the timeout the user should add thucydides.properties file to the main folder of the project (if you use thucidides jbehave archetype, there is no such file by default). \nset, for instance, story.timeout.in.secs=3000 and save the file. the timeout parameter will be overriden\n', '\nTo overide the timeout we can use the following :\n @Override\n        public Embedder configuredEmbedder(){\n\nStoryTimeouts.TimeoutParser t=new StoryTimeouts.TimeoutParser() {\n                @Override\n                public boolean isValid(String timeout) {\n                    return true;\n                }\n\n                @Override\n                public long asSeconds(String timeout) {\n                    return 500; <--- Storytimeout \n                }\n            };\n\n            embedder.useTimeoutParsers(t);\n}\n\n']"
 Puppeteer Get all data attribute values,"
 My html doc is
 <div class=""inner-column"">
@@ -2557,16 +2519,28 @@ const fs = require('fs');
 ",11k,"
             3
         ","[""\nYou could use the page.$$eval function for that like this:\nconst dataValues = await page.$$eval(\n    '.inner-column div',\n    divs => divs.map(div => div.dataset.thing)\n);\n\nExplanation\nWhat the page.$$eval function does (quote from the docs linked above):\n\nThis method runs Array.from(document.querySelectorAll(selector)) within the page and passes it as the first argument to pageFunction.\nIf pageFunction returns a Promise, then page.$$eval would wait for the promise to resolve and return its value.\n\nTherefore, it will first query the targeted divs and then map the divs to their data-* value by using the dataset property.\n"", '\nYou can use the evaluate function\nconst data = await page.evaluate(() => \n  Array.from(document.querySelectorAll("".inner-column DIV"")).map(d => d.getAttribute(""data-thing""))\n)\n\n']"
-Selenium Chrome WebDriver how to scroll horizontally,"
-Chrome web driver has a limitation that only loads webpage content that is in view. I have a website that has long horizontal table. I have Xpath that extracts column headers of a table that stretches more than the screen width. In chrome dev tool console if I run the xpath $x(myxpathgoeshere) I get all the headers including the ones that are not in view(the one that makes you scroll to see all). So I know my xpath is correct. But in code, when I access it by using selenium webdriver it only gives header names that are in current view. I came across various posts on chrome webdriver google group page, users mentioning this limitation and answer to it was to not fix it. So anyways, now I am trying to make it work using javascript to scroll horizontally and then do the findelement by xpath again to see if the elements to the right are loaded. But for some strange reason I cannot seem to get the scrolling horizontally to work. I am using C# Javascript executor.
-IJavaScriptExecutor js = (IJavaScriptExecutor) Driver;
-js.ExecuteScript(""scrollTo(3000,0);""); // whatever X value I use chrome is not scrolling to the right. 
+How to get the total number of Rows in a table | Cypress,"
 
-I have also tried scrollX and no luck. Is there something wrong with my code?
-Edited: forgot that I was using X for horizontal not Y
-",8k,"
-            2
-        ","['\nfor this type of issue i had use browser zoom-in and zoom-out functionality but i am using this in java. With java robot class i am doing browser zoom-out so i automatically shows the hidden column. you can try that it may help you. \n', '\nChange the code: \njs.ExecuteScript(""scrollTo(3000,0);"");\n\nto\njs.ExecuteScript(""scroll(3000,0);"");\n\nSimply, it\'s not scrollTo and scroll only.\n']"
+I have a table with N rows. How can I get the total number of rows present in the table?
+I search for a name, and that particular name is in row number X, how can I get the value of that particular row.
+
+",9k,"
+            3
+        ","['\nYou can use .find to solve both of your cases.\nTo get the table row count:\n  cy.get(""#tableID"")\n    .find(""tr"")\n    .then((row) => {\n      //row.length will give you the row count\n      cy.log(row.length);\n    });\n\nTo get the value ( index ) of the particular row, you can do something like this.\n  cy.get(""#Table Id"")\n    .find(""tr"")\n    .then((rows) => {\n      rows.toArray().forEach((element) => {\n        if (element.innerHTML.includes(""Your Value"")) {\n        //rows.index(element) will give you the row index\n          cy.log(rows.index(element));\n        }\n      });\n    });\n\nAdditional tip: If you want to select a specific table cell containing a value, you can do this:\n  cy.get(""#customers"").find(""tr"").find(""td"").contains(""Germany"");\n\nNote: to get the table row index there can be many other alternative ways. Hope you will figure them out on the go.\n']"
+Controlling a web browser using Excel VBA,"
+I have been assigned the task of automating a web based task ( for a HTTPS website). The users currently are filling in the Excel sheet with the data, they now want to automate excel in such a way that it directly controls the browser and fills in the data.
+I found the iMacros Scripting edition as a possible solution for doing this, I wanted to know if there are any other similar tools which can be used for controlling the browser and filling in data.
+I also had a look at the Selenium Client Driver, but I am not sure on how to use it in Excel VBA.
+Any help would be appreciated.
+Thanks,
+",25k,"
+            3
+        ","['\nYou can use Selenium from Visual Basic Editor by installing the tools provided here :\nhttp://code.google.com/p/selenium-vba/\nThere is a Selenium IDE plugin to automatically record a script in VBA and an installation package to run Selenium command in Visual Basic Editor.\nThe following example starts firefox, opens links in the 1st column, compares the title with the 2nd column and past the result in the 3rd column.\nUsed data are in a sheet, in a range named ""MyValues"".\nPublic Sub TC002()\n   Dim selenium As New SeleniumWrapper.WebDriver, r As Range\n   selenium.Start ""firefox"", ""http://www.google.com"" \n   For Each r In Range(""MyValues"").Rows\n     selenium.open r.Cells(, 1)\n     selenium.waitForNotTitle """"\n     r.Cells(, 3) = selenium.verifyTitle(r.Cells(, 2))\n   Next\n   selenium.stop\nEnd Sub\n\n', '\nThis sample open stackoverflow site an show IE\nSub OpenIE()\n\'officevb.com\nDim ie As Object\nSet ie = CreateObject(""InternetExplorer.Application"")\n\nie.Navigate ""http://www.stackowerflow.com""\n\n \'wait load\n While ie.ReadyState <> READYSTATE_COMPLETE\n  DoEvents\n Wend\n\nie.Visible = True\n\nEnd Sub\n\n[]\'s\n', '\nI use this code for reading data from excel and passin it to selenium for to do task like ""click, select, close etc"" and also you can write data to excel.\nThis is in python i don know VB and i do know perl if u wish i\'ll give same code in perl too.\ni hop this may help.\nfrom xlwt import Workbook\n\nimport xlrd\n\ntestconfigfilename=""testconfig.xls""\n\n    if (len(sys.argv) > 1):\n\n        testconfigfilename=sys.argv[1]       \n\n    wb = xlrd.open_workbook(testconfigfilename);\n\n    wb.sheet_names();\n\n    sh = wb.sheet_by_index(0); \'Sheet 0 - selenium server configuration\'\n\n\n\n    seleniumHost = sh.cell(1,0).value\n\n    seleniumPort = int(sh.cell(1,1).value)\n\n    testBaseURL = sh.cell(1,2).value\n\n    browser = sh.cell(1,3).value\n\n    timeout = int(sh.cell(1,4).value)\n\n    path = sh.cell(1,5).value\n\noutputwb = Workbook()\n\n    outputsheet = outputwb.add_sheet(""result"",cell_overwrite_ok=True) #get the first sheet in the result xls \n\noutputsheet.write(RowNumber,colNumber,""data"")\n\n']"
+jbehave + thucydides: how to override 300s timeout,"
+I'm using thucydides jbehave plugin to run Selenium tests. However, I can't run tests longer than 5 min in total due to jbehave timeout. I can't figure out how can thucydides/jbehave should be configured to override this limitation. Selenium tests use to be longer that 5 mins, so that should be an actual problem for many people.
+",5k,"
+            3
+        ","['\nTo override the timeout the user should add thucydides.properties file to the main folder of the project (if you use thucidides jbehave archetype, there is no such file by default). \nset, for instance, story.timeout.in.secs=3000 and save the file. the timeout parameter will be overriden\n', '\nTo overide the timeout we can use the following :\n @Override\n        public Embedder configuredEmbedder(){\n\nStoryTimeouts.TimeoutParser t=new StoryTimeouts.TimeoutParser() {\n                @Override\n                public boolean isValid(String timeout) {\n                    return true;\n                }\n\n                @Override\n                public long asSeconds(String timeout) {\n                    return 500; <--- Storytimeout \n                }\n            };\n\n            embedder.useTimeoutParsers(t);\n}\n\n']"
 Python Selenium - What are possible keys in FireFox webdriver profile preferences,"
 I couldn't really find this information anywhere, I am looking for a list of possible keys that can be used in the profile.set_preference() API.
 Here is some context:
@@ -2580,11 +2554,6 @@ Now, if I want to, say specify a client SSL, I need to configure that as a prefe
 ",2k,"
             2
         ","[""\nYou can look at profile.DEFAULT_PREFERENCES which is the json at python2.7/site-packages/selenium/webdriver/firefox/webdriver_prefs.json\n{u'frozen': {u'app.update.auto': False,\n  u'app.update.enabled': False,\n  u'browser.EULA.3.accepted': True,\n  u'browser.EULA.override': True,\n  u'browser.displayedE10SNotice': 4,\n  u'browser.download.manager.showWhenStarting': False,\n  u'browser.link.open_external': 2,\n  u'browser.link.open_newwindow': 2,\n  u'browser.offline': False,\n  u'browser.reader.detectedFirstArticle': True,\n  u'browser.safebrowsing.enabled': False,\n  u'browser.safebrowsing.malware.enabled': False,\n  u'browser.search.update': False,\n  u'browser.selfsupport.url': u'',\n  u'browser.sessionstore.resume_from_crash': False,\n  u'browser.shell.checkDefaultBrowser': False,\n  u'browser.tabs.warnOnClose': False,\n  u'browser.tabs.warnOnOpen': False,\n  u'datareporting.healthreport.logging.consoleEnabled': False,\n  u'datareporting.healthreport.service.enabled': False,\n  u'datareporting.healthreport.service.firstRun': False,\n  u'datareporting.healthreport.uploadEnabled': False,\n  u'datareporting.policy.dataSubmissionEnabled': False,\n  u'datareporting.policy.dataSubmissionPolicyAccepted': False,\n  u'devtools.errorconsole.enabled': True,\n  u'dom.disable_open_during_load': False,\n  u'extensions.autoDisableScopes': 10,\n  u'extensions.blocklist.enabled': False,\n  u'extensions.logging.enabled': True,\n  u'extensions.update.enabled': False,\n  u'extensions.update.notifyUser': False,\n  u'javascript.enabled': True,\n  u'network.http.phishy-userpass-length': 255,\n  u'network.manage-offline-status': False,\n  u'offline-apps.allow_by_default': True,\n  u'prompts.tab_modal.enabled': False,\n  u'security.csp.enable': False,\n  u'security.fileuri.origin_policy': 3,\n  u'security.fileuri.strict_origin_policy': False,\n  u'security.warn_entering_secure': False,\n  u'security.warn_entering_secure.show_once': False,\n  u'security.warn_entering_weak': False,\n  u'security.warn_entering_weak.show_once': False,\n  u'security.warn_leaving_secure': False,\n  u'security.warn_leaving_secure.show_once': False,\n  u'security.warn_submit_insecure': False,\n  u'security.warn_viewing_mixed': False,\n  u'security.warn_viewing_mixed.show_once': False,\n  u'signon.rememberSignons': False,\n  u'toolkit.networkmanager.disable': True,\n  u'toolkit.telemetry.enabled': False,\n  u'toolkit.telemetry.prompted': 2,\n  u'toolkit.telemetry.rejected': True},\n u'mutable': {u'browser.dom.window.dump.enabled': True,\n  u'browser.newtab.url': u'about:blank',\n  u'browser.newtabpage.enabled': False,\n  u'browser.startup.homepage': u'about:blank',\n  u'browser.startup.page': 0,\n  u'dom.max_chrome_script_run_time': 30,\n  u'dom.max_script_run_time': 30,\n  u'dom.report_all_js_exceptions': True,\n  u'javascript.options.showInConsole': True,\n  u'network.http.max-connections-per-server': 10,\n  u'startup.homepage_welcome_url': u'about:blank',\n  u'webdriver_accept_untrusted_certs': True,\n  u'webdriver_assume_untrusted_issuer': True}}\n\n"", '\nI usually just open about:config and search the list of preferences there. There is also this helpful resource which documents part of the preferences.\n']"
-How do I switch to new tab or window in playwright-java?,"
-How can we switch to a new window that has opened while running test, and how can I get back to the parent window in playwright-java?
-",3k,"
-            2
-        ","['\nThere is no Switch action like Selenium. You can use the waitForPage or waitForPopup functions. You just need to know what is the action triggering that new page. e.g.\nPage popup = context.waitForPage(() -> page.click(""a""));\n\nThe context class also has a pages() function, which returns all the open pages.\n', ""\nexpanding on @hardkoded's answer, I got an error and am now using this:\ncontext.waitForEvent('page')\n\nworks for my purposes so far\n"", '\nWhat you want to do is continue your test in a new page. The official docs: https://playwright.dev/docs/pages#handling-new-pages\nHere is an example where we first work in the initial ""page"" and then, after clicking a button we want to continue our tests in a new tab we define as ""newPage"":\n        // Here we are working in the initial page\n        await page.locator(""#locator"").type(""This happens in the initial page.."");\n\n        /*  When ""Ok"" is clicked the test waits for a new page event and assigns to new page object to a variable called newPage\n            After this point we want the test to continue in the new tab,\n            so we\'ll have to use the newly defined newPage variable when working on that tab\n        */\n        const [newPage] = await Promise.all([\n            context.waitForEvent(\'page\'),\n            page.locator(""span >> text=Ok"").click()\n            \n        ])\n        await newPage.waitForLoadState();\n\n        console.log(""A new tab opened and the url of the tab is: "" + newPage.url());\n\n        // Here we work with the newPage object and we can perform actions like with page\n        await newPage.locator(""#Description"").type(""This happens in a new tab!"");\n\n']"
 how to use edgeDriver with qaf,"
 I use below properties to run edge browser, but it doesn't work.
 webdriver.edge.driver=src/main/resources/common/msedgedriver.exe
@@ -2594,6 +2563,21 @@ How can I use edge browser?
 ",568,"
             2
         ","['\nIn order to set driver executable, you need to set value using appropriate system property for the driver. You can set system property either at the time of execution using -Dpropertyname=value or through code.  If you are using qaf, it provides feature to set system property through property file. For that purpose you need to add system prefix with property name. For example:\nsystem.webdriver.edge.driver=src/main/resources/common/msedgedriver.exe\n', '\nAccording to the doc https://qmetry.github.io/qaf/latest/how_to_use_driver.html and check the UiDriverFactory.java in com.qmetry.qaf.automation.ui of qaf, it looks qaf not support this.\n']"
+Selenium Chrome WebDriver how to scroll horizontally,"
+Chrome web driver has a limitation that only loads webpage content that is in view. I have a website that has long horizontal table. I have Xpath that extracts column headers of a table that stretches more than the screen width. In chrome dev tool console if I run the xpath $x(myxpathgoeshere) I get all the headers including the ones that are not in view(the one that makes you scroll to see all). So I know my xpath is correct. But in code, when I access it by using selenium webdriver it only gives header names that are in current view. I came across various posts on chrome webdriver google group page, users mentioning this limitation and answer to it was to not fix it. So anyways, now I am trying to make it work using javascript to scroll horizontally and then do the findelement by xpath again to see if the elements to the right are loaded. But for some strange reason I cannot seem to get the scrolling horizontally to work. I am using C# Javascript executor.
+IJavaScriptExecutor js = (IJavaScriptExecutor) Driver;
+js.ExecuteScript(""scrollTo(3000,0);""); // whatever X value I use chrome is not scrolling to the right. 
+
+I have also tried scrollX and no luck. Is there something wrong with my code?
+Edited: forgot that I was using X for horizontal not Y
+",8k,"
+            2
+        ","['\nfor this type of issue i had use browser zoom-in and zoom-out functionality but i am using this in java. With java robot class i am doing browser zoom-out so i automatically shows the hidden column. you can try that it may help you. \n', '\nChange the code: \njs.ExecuteScript(""scrollTo(3000,0);"");\n\nto\njs.ExecuteScript(""scroll(3000,0);"");\n\nSimply, it\'s not scrollTo and scroll only.\n']"
+How do I switch to new tab or window in playwright-java?,"
+How can we switch to a new window that has opened while running test, and how can I get back to the parent window in playwright-java?
+",3k,"
+            2
+        ","['\nThere is no Switch action like Selenium. You can use the waitForPage or waitForPopup functions. You just need to know what is the action triggering that new page. e.g.\nPage popup = context.waitForPage(() -> page.click(""a""));\n\nThe context class also has a pages() function, which returns all the open pages.\n', ""\nexpanding on @hardkoded's answer, I got an error and am now using this:\ncontext.waitForEvent('page')\n\nworks for my purposes so far\n"", '\nWhat you want to do is continue your test in a new page. The official docs: https://playwright.dev/docs/pages#handling-new-pages\nHere is an example where we first work in the initial ""page"" and then, after clicking a button we want to continue our tests in a new tab we define as ""newPage"":\n        // Here we are working in the initial page\n        await page.locator(""#locator"").type(""This happens in the initial page.."");\n\n        /*  When ""Ok"" is clicked the test waits for a new page event and assigns to new page object to a variable called newPage\n            After this point we want the test to continue in the new tab,\n            so we\'ll have to use the newly defined newPage variable when working on that tab\n        */\n        const [newPage] = await Promise.all([\n            context.waitForEvent(\'page\'),\n            page.locator(""span >> text=Ok"").click()\n            \n        ])\n        await newPage.waitForLoadState();\n\n        console.log(""A new tab opened and the url of the tab is: "" + newPage.url());\n\n        // Here we work with the newPage object and we can perform actions like with page\n        await newPage.locator(""#Description"").type(""This happens in a new tab!"");\n\n']"
 How to add wait / Delay until web page is fully loaded in Automation Anywhere?,"
 I want to know 'How to add wait or Delay until webpage is fully loaded,' in automations anywhere,
 I used 
@@ -2759,169 +2743,6 @@ return results;
 ",3k,"
             1
         ",[]
-StaleElement exception error when asserting data in a table,"
-I am trying to add data to a table and then asserting that data is added by collecting table data in a list but every time it throws me a StaleElement exception error, now I guess it is happening because the list is getting refreshed, so I am not sure how do I handle it.
-Here is my implementation
-    private static List<WebElement> listOfJobs = 
-    driver.findElements(By.xpath((""//*[@id='resultTable']//tbody/tr//a"")));
-
-    public static List<WebElement> getListOfJobs() 
-        {
-            try 
-            {
-                return listOfJobs;
-            } 
-            catch (Exception e) 
-            {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-    public static String generateName()
-        {
-            String AlphaNumericString = ""abcdefghijklmnopqrstuvxyz"";
-            StringBuilder sb = new StringBuilder(9);
-    
-            for (int i = 0; i < 9; i++) 
-            {
-                int index = (int)(AlphaNumericString.length() * Math.random());
-                sb.append(AlphaNumericString.charAt(index));
-            }
-            return sb.toString()+""digi"";
-        }
-    
-    @SuppressWarnings({ ""null"" })
-        public static List<String> listOfJobs()
-        {
-            List<String> jobs = null;
-            for(int i=0; i < OrangeHRMAddJobCategories.getListOfJobs().size(); i++)
-            {
-                jobs.add(OrangeHRMAddJobCategories.getListOfJobs().get(i).getText());
-            }
-            return jobs;
-        }
-
-    OrangeHRMAddJobCategories jobCategories = new OrangeHRMAddJobCategories();
-            jobCategories.clickJobTab().clickJobCategoires().clickAdd().setJobCategoryName(UsefulFunctionUtils.generateName()).saveJobCategory();   
-
-    Assertions.assertThat(UsefulFunctionUtils.listOfJobs().contains(""digi""));
-
-I feel that the listOfJobs should be reinjected somewhere but not sure where exactly do I put it because refreshing the page did not work.
-Complete stacktrace
-
-    org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-      (Session info: chrome=94.0.4606.61)
-    For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-    Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-    System info: host: 'DESKTOP-R3JT7MO', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-    Driver info: org.openqa.selenium.chrome.ChromeDriver
-    Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\CHINMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-    Session ID: 8b68238ee73ae8190f250fa15fbb41f1
-        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-        at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-        at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-        at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-        at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-        at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-        at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-        at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-        at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-        at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-        at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-        at com.digicorp.utils.UsefulFunctionUtils.listOfJobs(UsefulFunctionUtils.java:45)
-        at com.digicorp.testcases.TC_AddJobCategory.testAddJobCategory(TC_AddJobCategory.java:26)
-        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-        at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-        at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-        at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-        at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-        at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-        at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-        at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-        at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-        at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-        at org.testng.TestRunner.privateRun(TestRunner.java:794)
-        at org.testng.TestRunner.run(TestRunner.java:596)
-        at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-        at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-        at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-        at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-        at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-        at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-        at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-        at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-        at org.testng.TestNG.runSuites(TestNG.java:1063)
-        at org.testng.TestNG.run(TestNG.java:1031)
-        at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-        at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-        at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-
-",65,"
-            0
-        ","['\n\norg.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n\nIndicates that a reference to an element is now ""stale"" --- the element no longer appears on the DOM of the page. The reason for this expectation is may be your DOM got updated or refreshed. For an example, after performing an action like click() your DOM may get updated or refreshed. In this time when you are trying to find an element on DOM you will experience this error.\nYou have to re-find that element in updated or refreshed DOM\ntry{\n    jobs.add(OrangeHRMAddJobCategories.getListOfJobs().get(i).getText());\n   }catch(org.openqa.selenium.StaleElementReferenceException e){\n     new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(OrangeHRMAddJobCategories.getListOfJobs().get(i)));\n     jobs.add(OrangeHRMAddJobCategories.getListOfJobs().get(i).getText());\n   }\n\n\n', '\nAs per the convo with OP, it\'s getting stale at this point\njobs.add(OrangeHRMAddJobCategories.getListOfJobs().get(i).getText());\n\nIt could be because he is calling getListOfJobs which returns a List of WebElement.\nand when you call again, they are no longer available to page dom, cause you might have interacted with web element/elements in first iteration. There are few fixes, such as using Explicit wait staleness or redefining the elements again and again for next iteration.\nFix 1 :\nprivate static List<WebElement> listOfJobs = driver.findElements(By.xpath((""//*[@id=\'resultTable\']//tbody/tr//a"")));\n\npublic static List<WebElement> getListOfJobs(int j) \n {\n     try \n     {\n         List<WebElement> listOfJobs = driver.findElements(By.xpath(""(//*[@id=\'resultTable\']//tbody/tr//a)[\'""+j+""\']""));\n         return listOfJobs;\n     } \n     catch (Exception e) \n     {\n         e.printStackTrace();\n     }\n     return null;\n }\n \n \n    @SuppressWarnings({ ""null"" })\n    public static List<String> listOfJobs()\n    {\n        int j = 1;\n        List<String> jobs = null;\n        for(int i=0; i < listOfJobs.size(); i++)\n        {\n            jobs.add(OrangeHRMAddJobCategories.getListOfJobs(j).get(i).getText());\n            j++;\n        }\n        return jobs;\n    }\n\n', '\nYou are doing the operation before the element is loaded in the webpage, so please add the wait conditions and then do your operation.\nBy divCss = By.xpath((""//*[@id=\'resultTable\']//tbody/tr//a""));\nwait.until(ExpectedConditions.elementToBeClickable(divCss));\nwait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(divCss));\n\n']"
-how to instantiate the webdriver object from the custom library when doing web automation using robot framework,"
-while defining user keywords in custom library for web automation,which library should be imported?selenium2library or importing webdriver from selenium.How to use the webdriver to click on some elements.Kindly explain with an example 
-",1k,"
-            0
-        ","['\nIn most scenarios you do not need to instantiate the webdriver object. Usually you use the webdriver instance that Selenium2Library already has. How you access that instance depends on how you plan on interacting with Selenium2Library. See the ""Extending existing test libraries"" section in the user guide for options. Each options have pros and cons.\nIf you inherit Selenium2Library, then you would access the driver via self._current_browser().\nIf you plan on using the Selenium2Library directly instead of inheriting, you would declare both Selenium2Library and your custom libraries. The most convenient way to access the driver is through a private property as demonstrated below. \nfrom robot.libraries.BuiltIn import BuiltIn\n\nclass Selenium2LibraryExt(object):\n\n    @property\n    def _s2l(self):\n        return BuiltIn().get_library_instance(\'Selenium2Library\')\n\n    @property\n    def _driver(self):\n        return self._s2l._current_browser()\n\n    def perform_search(self, criteria):\n        textbox = self._driver.find_element_by_name(\'q\')\n        textbox.send_keys(criteria)\n        textbox.submit()\n\nTest suite file:\n*** Settings ***\nTest Teardown     Close All Browsers\nLibrary           Selenium2Library\nLibrary           c:/ws/Selenium2LibraryExt.py\n\n*** Test Cases ***\nDo a search\n    Open Browser    http://www.google.com/    gc\n    Perform Search    happiness\n\n', '\nI have found that inheriting Selenium2Library is usually enough, like this\nfrom Selenium2Library import Selenium2Library\n\nclass MySelenium2Library(Selenium2Library):\n    def my_keyword(self):\n        my_element = self.get_my_element()\n        self.click_element(my_element)\n\nIn Robot you import this new library\n*** Settings ***\nLibrary    MySelenium2Library.py\n\n*** Test Cases ***\nTest 1\n    My Keyword\n\nI have not needed webdriver to click elements. I do all my clicking with Selenium2Library click methods like click_element.\n']"
-can't convert webbot script to an executable,"
-I am trying to convert a python script which uses the webbot library for web automation.
-As I tried to convert my running Python (3.6.5) script to an .exe file using pyinstaller I was getting an error that the path of the webbot module could not be found.
-In order to overcome this problem I tried to specify the path of the module in the spec file, without success. An easier workaround suggests copying the downloaded folder webbot in the same folder where the .exe file is.
-Its a very handy tool to use , i don't wanna ditch it .
-",230,"
-            0
-        ","['\nIn order for this to work you should not convert it as one file like this\npyinstaller --onefile file.py\n\nbut like this\npyinstaller file.py\n\nAfter doing this the .exe could be launched without any problems.\nAn other error was coming because of trying to import webbot in my script. Probably this is a noob mistake, but one has to:\nfrom webbot import Browser\n\n']"
-IE Web Automation - How to auto select value from combo box using Excel VBA/XML Macro,"
-I'm a beginner in VBA and I've failed to select country name automatically in web Combo box or list box from my Excel spreadsheet. My code is entering country name only, but not selecting it. 
-How can I change this code so it can pick country name from my Excel spreadsheet and select the same in web combo box as a loop. Passport number, DOB and Nationality are correct on my code. If you'll use manually then you can find the work permit number which I need to capture in my spreadsheet. Chrome Inspect Element screenshot is attached herewith.
-
-My code is as follows:
-Sub MOL()
-    Dim IE As New SHDocVw.InternetExplorer
-    Dim Doc As MSHTML.HTMLDocument
-    Dim Buttons As MSHTML.IHTMLElementCollection
-    Dim Button As MSHTML.IHTMLElement
-    Dim HTMLInput As MSHTML.IHTMLElement
-    Dim Tags As MSHTML.IHTMLElement
-    Dim HTMLTables As MSHTML.IHTMLElementCollection
-    Dim HTMLTable As MSHTML.IHTMLElement
-    Dim HTMLRow As MSHTML.IHTMLElement
-    Dim HTMLCell As MSHTML.IHTMLElement
-    Dim Alltext As IHTMLElementCollection
-
-Application.ScreenUpdating = False
-'Application.Calculation = xlCalculationManual
-'Application.EnableEvents = False
-
-On Error Resume Next
-
-    IE.Visible = True
-    IE.navigate ""https://eservices.mol.gov.ae/SmartTasheel/Complain/IndexLogin?lang=en-gb""
-
-Do While IE.readyState <> READYSTATE_COMPLETE: Loop
-
-Set Doc = IE.document
-Set Buttons = Doc.getElementsByTagName(""Button"")
-Buttons(2).Click
-Do While IE.readyState <> READYSTATE_INTERACTIVE = 3: Loop
-Set HTMLInputs = Doc.getElementsByTagName(""Input"")
-    HTMLInputs(46).Value = ""somevalue""
-    HTMLInputs(48).Value = ""24/02/1990""
-    HTMLInputs(47).Value = ""India""
-Buttons(21).Click
-End Sub
-
-",2k,"
-            0
-        ","['\nThe solution you look for is a bit difficult to provide. There are few tricky parts to hurdle to select the NATIONALITY from dropdown. I\'ve used .querySelector() within the script to make it concise. However, it should serve your purpose no matter whatever country you wanna select from dropdown. Give it a shot:\nSub GetInfo()\n    Dim IE As New InternetExplorer, HTML As HTMLDocument, post As Object, URL$\n\n    URL = ""https://eservices.mol.gov.ae/SmartTasheel/Complain/IndexLogin?lang=en-gb""\n\n    With IE\n        .Visible = True\n        .navigate URL\n        While .Busy = True Or .readyState < 4: DoEvents: Wend\n        Set HTML = .document\n\n        HTML.getElementById(""TransactionInfo_WorkPermitNumber"").innerText = ""2659558""\n        HTML.querySelector(""button[ng-click=\'showEmployeeSearch()\']"").Click\n\n        Application.Wait Now + TimeValue(""00:00:03"")  \'\'If for some reason the script fails, make sure to increase the delay\n\n        HTML.getElementById(""txtPassportNumber"").Value = ""J2659558""\n        HTML.getElementById(""Nationality"").Focus\n        For Each post In HTML.getElementsByClassName(""ng-scope"")\n            With post.getElementsByClassName(""ng-binding"")\n                For I = 0 To .Length - 1\n                    If .item(I).innerText = ""INDIA"" Then \'\'you can change the country name here to select from dropdown\n                        .item(I).Click\n                        Exit For\n                    End If\n                Next I\n            End With\n        Next post\n        HTML.getElementById(""txtBirthDate"").Value = ""24/02/1990""\n        HTML.querySelector(""button[onclick=\'SearchEmployee()\']"").Click\n    End With\nEnd Sub\n\nReference to add to the library:\nMicrosoft Internet Controls\nMicrosoft HTML Object library\n\nWhen you execute the above script, it should give you the desired result.\nAnother way would be to go for using xmlhttp request which is way faster than IE. You need to pass the query string parameter arguments as dictionary through ""POST"" request. If you want to change the parameter as in, birth date,passportor nationality just do it in the QueryString. Btw, the Nationality parameter should be filled in with value instead of name as in, 100 for INDIA.  This is how your script should look like:\nSub Get_Data()\n    Dim res As Variant, QueryString$, ID$, Name$\n\n    QueryString = ""{""""PersonPassportNumber"""":""""J2659558"""",""""PersonNationality"""":""""100"""",""""PersonBirthDate"""":""""24/02/1990""""}""\n\n    With New XMLHTTP\n        .Open ""POST"", ""https://eservices.mol.gov.ae/SmartTasheel/Dashboard/GetEmployees"", False\n        .setRequestHeader ""User-Agent"", ""Mozilla/5.0""\n        .setRequestHeader ""Content-Type"", ""application/json""\n        .send QueryString\n        res = .responseText\n    End With\n\n    ID = Split(Split(Split(res, ""Employees"""":"")(1), ""ID"""":"""""")(1), """""","")(0)\n    Name = Split(Split(Split(res, ""Employees"""":"")(1), ""OtherData2"""":"""""")(1), """"""}"")(0)\n\n    [A1] = ID: [B1] = Name\nEnd Sub\n\nReference to add to the library:\nMicrosoft XML, V6.0\n\nRunning the above script, you should get the NAME and ID of your required search.\n']"
 Selecting value from a dropdown list on a webpage using vba,"
 On this site I am able to select the country and language from dropdown menu but when I click on ""Complete new application form"" button. It says fields are empty.
 Any help would be appreciated.
@@ -2972,3 +2793,59 @@ strURL = ""https://visa.kdmid.ru/PetitionChoice.aspx""
 ",3k,"
             0
         ","['\nSo you are on the right track but if you look at the HTML of the site there are actually two elements with the country selection- you got the first one, \'ctl00_phBody_Country\', but this is actually just the drop down, and the actual selected value is stored in \'ctl00_phBody_cddCountry_ClientState\'... the language section has similar structure. Lastly the accepted value is not just the country name you see in the drop down, it is actually a combination of a country code from the drop down and the country name....\nSee below for sample code:\nPublic Sub Test()\nDim IE As InternetExplorer\nDim HTMLDoc As HTMLDocument\n\nDim countryStr As String\nDim countryObj As HTMLObjectElement\nDim countryCodes As IHTMLElementCollection\nDim codeCounter As Long\nDim languageStr As String\nDim languageObj As HTMLObjectElement\nDim languageCodes As IHTMLElementCollection\n\ncountryStr = ""Netherlands""\nlanguageStr = ""English""\n\nSet IE = New InternetExplorer\n\nWith IE\n    .Visible = False\n    .Navigate ""https://visa.kdmid.ru/PetitionChoice.aspx?AspxAutoDetectCookieSupport=1""\n    While .Busy Or .ReadyState <> READYSTATE_COMPLETE: Wend\n    Set HTMLDoc = IE.document\nEnd With\n\nSet countryObj = HTMLDoc.getElementById(""ctl00_phBody_cddCountry_ClientState"")\nSet countryCodes = HTMLDoc.getElementById(""ctl00_phBody_Country"").getElementsByTagName(""option"")\nFor codeCounter = 0 To countryCodes.Length - 1\n    If countryCodes(codeCounter).innerText = UCase(countryStr) Then\n        countryObj.Value = countryCodes(codeCounter).Value & "":::"" & countryCodes(codeCounter).innerText & "":::""\n        While IE.Busy Or IE.ReadyState <> READYSTATE_COMPLETE: Wend\n        Exit For\n    End If\nNext\n\nSet languageObj = HTMLDoc.getElementById(""ctl00_phBody_cddLanguage_ClientState"")\nSet languageCodes = HTMLDoc.getElementById(""ctl00_phBody_ddlLanguage"").getElementsByTagName(""option"")\nFor codeCounter = 0 To languageCodes.Length - 1\n    If languageCodes(codeCounter).innerText = UCase(languageStr) Then\n        languageObj.Value = languageCodes(codeCounter).Value & "":::"" & languageCodes(codeCounter).innerText & "":::""\n        While IE.Busy Or IE.ReadyState <> READYSTATE_COMPLETE: Wend\n        Exit For\n    End If\nNext\n\nHTMLDoc.getElementById(""ctl00$phBody$cbConfirm"").Click\nWhile IE.Busy Or IE.ReadyState <> READYSTATE_COMPLETE: Wend\nHTMLDoc.getElementById(""ctl00_phBody_btnNewApplication"").Click      \'Launch Form\n\nIE.Quit\nSet IE = Nothing\nEnd Sub\n\n']"
+how to instantiate the webdriver object from the custom library when doing web automation using robot framework,"
+while defining user keywords in custom library for web automation,which library should be imported?selenium2library or importing webdriver from selenium.How to use the webdriver to click on some elements.Kindly explain with an example 
+",1k,"
+            0
+        ","['\nIn most scenarios you do not need to instantiate the webdriver object. Usually you use the webdriver instance that Selenium2Library already has. How you access that instance depends on how you plan on interacting with Selenium2Library. See the ""Extending existing test libraries"" section in the user guide for options. Each options have pros and cons.\nIf you inherit Selenium2Library, then you would access the driver via self._current_browser().\nIf you plan on using the Selenium2Library directly instead of inheriting, you would declare both Selenium2Library and your custom libraries. The most convenient way to access the driver is through a private property as demonstrated below. \nfrom robot.libraries.BuiltIn import BuiltIn\n\nclass Selenium2LibraryExt(object):\n\n    @property\n    def _s2l(self):\n        return BuiltIn().get_library_instance(\'Selenium2Library\')\n\n    @property\n    def _driver(self):\n        return self._s2l._current_browser()\n\n    def perform_search(self, criteria):\n        textbox = self._driver.find_element_by_name(\'q\')\n        textbox.send_keys(criteria)\n        textbox.submit()\n\nTest suite file:\n*** Settings ***\nTest Teardown     Close All Browsers\nLibrary           Selenium2Library\nLibrary           c:/ws/Selenium2LibraryExt.py\n\n*** Test Cases ***\nDo a search\n    Open Browser    http://www.google.com/    gc\n    Perform Search    happiness\n\n', '\nI have found that inheriting Selenium2Library is usually enough, like this\nfrom Selenium2Library import Selenium2Library\n\nclass MySelenium2Library(Selenium2Library):\n    def my_keyword(self):\n        my_element = self.get_my_element()\n        self.click_element(my_element)\n\nIn Robot you import this new library\n*** Settings ***\nLibrary    MySelenium2Library.py\n\n*** Test Cases ***\nTest 1\n    My Keyword\n\nI have not needed webdriver to click elements. I do all my clicking with Selenium2Library click methods like click_element.\n']"
+IE Web Automation - How to auto select value from combo box using Excel VBA/XML Macro,"
+I'm a beginner in VBA and I've failed to select country name automatically in web Combo box or list box from my Excel spreadsheet. My code is entering country name only, but not selecting it. 
+How can I change this code so it can pick country name from my Excel spreadsheet and select the same in web combo box as a loop. Passport number, DOB and Nationality are correct on my code. If you'll use manually then you can find the work permit number which I need to capture in my spreadsheet. Chrome Inspect Element screenshot is attached herewith.
+
+My code is as follows:
+Sub MOL()
+    Dim IE As New SHDocVw.InternetExplorer
+    Dim Doc As MSHTML.HTMLDocument
+    Dim Buttons As MSHTML.IHTMLElementCollection
+    Dim Button As MSHTML.IHTMLElement
+    Dim HTMLInput As MSHTML.IHTMLElement
+    Dim Tags As MSHTML.IHTMLElement
+    Dim HTMLTables As MSHTML.IHTMLElementCollection
+    Dim HTMLTable As MSHTML.IHTMLElement
+    Dim HTMLRow As MSHTML.IHTMLElement
+    Dim HTMLCell As MSHTML.IHTMLElement
+    Dim Alltext As IHTMLElementCollection
+
+Application.ScreenUpdating = False
+'Application.Calculation = xlCalculationManual
+'Application.EnableEvents = False
+
+On Error Resume Next
+
+    IE.Visible = True
+    IE.navigate ""https://eservices.mol.gov.ae/SmartTasheel/Complain/IndexLogin?lang=en-gb""
+
+Do While IE.readyState <> READYSTATE_COMPLETE: Loop
+
+Set Doc = IE.document
+Set Buttons = Doc.getElementsByTagName(""Button"")
+Buttons(2).Click
+Do While IE.readyState <> READYSTATE_INTERACTIVE = 3: Loop
+Set HTMLInputs = Doc.getElementsByTagName(""Input"")
+    HTMLInputs(46).Value = ""somevalue""
+    HTMLInputs(48).Value = ""24/02/1990""
+    HTMLInputs(47).Value = ""India""
+Buttons(21).Click
+End Sub
+
+",2k,"
+            0
+        ","['\nThe solution you look for is a bit difficult to provide. There are few tricky parts to hurdle to select the NATIONALITY from dropdown. I\'ve used .querySelector() within the script to make it concise. However, it should serve your purpose no matter whatever country you wanna select from dropdown. Give it a shot:\nSub GetInfo()\n    Dim IE As New InternetExplorer, HTML As HTMLDocument, post As Object, URL$\n\n    URL = ""https://eservices.mol.gov.ae/SmartTasheel/Complain/IndexLogin?lang=en-gb""\n\n    With IE\n        .Visible = True\n        .navigate URL\n        While .Busy = True Or .readyState < 4: DoEvents: Wend\n        Set HTML = .document\n\n        HTML.getElementById(""TransactionInfo_WorkPermitNumber"").innerText = ""2659558""\n        HTML.querySelector(""button[ng-click=\'showEmployeeSearch()\']"").Click\n\n        Application.Wait Now + TimeValue(""00:00:03"")  \'\'If for some reason the script fails, make sure to increase the delay\n\n        HTML.getElementById(""txtPassportNumber"").Value = ""J2659558""\n        HTML.getElementById(""Nationality"").Focus\n        For Each post In HTML.getElementsByClassName(""ng-scope"")\n            With post.getElementsByClassName(""ng-binding"")\n                For I = 0 To .Length - 1\n                    If .item(I).innerText = ""INDIA"" Then \'\'you can change the country name here to select from dropdown\n                        .item(I).Click\n                        Exit For\n                    End If\n                Next I\n            End With\n        Next post\n        HTML.getElementById(""txtBirthDate"").Value = ""24/02/1990""\n        HTML.querySelector(""button[onclick=\'SearchEmployee()\']"").Click\n    End With\nEnd Sub\n\nReference to add to the library:\nMicrosoft Internet Controls\nMicrosoft HTML Object library\n\nWhen you execute the above script, it should give you the desired result.\nAnother way would be to go for using xmlhttp request which is way faster than IE. You need to pass the query string parameter arguments as dictionary through ""POST"" request. If you want to change the parameter as in, birth date,passportor nationality just do it in the QueryString. Btw, the Nationality parameter should be filled in with value instead of name as in, 100 for INDIA.  This is how your script should look like:\nSub Get_Data()\n    Dim res As Variant, QueryString$, ID$, Name$\n\n    QueryString = ""{""""PersonPassportNumber"""":""""J2659558"""",""""PersonNationality"""":""""100"""",""""PersonBirthDate"""":""""24/02/1990""""}""\n\n    With New XMLHTTP\n        .Open ""POST"", ""https://eservices.mol.gov.ae/SmartTasheel/Dashboard/GetEmployees"", False\n        .setRequestHeader ""User-Agent"", ""Mozilla/5.0""\n        .setRequestHeader ""Content-Type"", ""application/json""\n        .send QueryString\n        res = .responseText\n    End With\n\n    ID = Split(Split(Split(res, ""Employees"""":"")(1), ""ID"""":"""""")(1), """""","")(0)\n    Name = Split(Split(Split(res, ""Employees"""":"")(1), ""OtherData2"""":"""""")(1), """"""}"")(0)\n\n    [A1] = ID: [B1] = Name\nEnd Sub\n\nReference to add to the library:\nMicrosoft XML, V6.0\n\nRunning the above script, you should get the NAME and ID of your required search.\n']"
+can't convert webbot script to an executable,"
+I am trying to convert a python script which uses the webbot library for web automation.
+As I tried to convert my running Python (3.6.5) script to an .exe file using pyinstaller I was getting an error that the path of the webbot module could not be found.
+In order to overcome this problem I tried to specify the path of the module in the spec file, without success. An easier workaround suggests copying the downloaded folder webbot in the same folder where the .exe file is.
+Its a very handy tool to use , i don't wanna ditch it .
+",230,"
+            0
+        ","['\nIn order for this to work you should not convert it as one file like this\npyinstaller --onefile file.py\n\nbut like this\npyinstaller file.py\n\nAfter doing this the .exe could be launched without any problems.\nAn other error was coming because of trying to import webbot in my script. Probably this is a noob mistake, but one has to:\nfrom webbot import Browser\n\n']"
