@@ -53,7 +53,7 @@ def scrape_page(page=1, tag=""):
     Function to scrape a single page in stack overflow
     """
     # Get page and read HTML from the page
-    update_URL = build_url(tag=tag)
+    update_URL = build_url(page=page, tag=tag)
     response = urlopen(update_URL)
     html = response.read()
     soup = BeautifulSoup(html)
@@ -86,6 +86,9 @@ def scrape(tag=""):
     """
     questions = []
     for i in range(1, CURR_PAGE_LIMIT + 1):
+        # An issue need to be fixed later for maximum page.
+        if i > CURR_PAGE_LIMIT:
+            break
         questions.extend(scrape_page(i, tag))
     return questions
 
