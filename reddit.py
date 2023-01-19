@@ -5,7 +5,7 @@ import csv
 # https://towardsdatascience.com/scraping-reddit-data-1c0af3040768
 
 # Limit for number of questions to be scraped in each subreddit.
-LIMIT = 120  # Reddit rate limit is around 2 sec/posts
+LIMIT = 300  # Reddit rate limit is around 2 sec/posts
 
 
 def scrape(subreddit=""):
