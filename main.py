@@ -32,13 +32,17 @@ def scrape_question(href):
 
     # Add prpoperties (Title, Description, Vote, Views) of questions.
     question = {}
-    question["Title"] = q_soup.find(
-        "h1", class_="fs-headline1 ow-break-word mb8 flex--item fl1").text
-    question["Description"] = q_soup.find(
-        "div", class_="s-prose js-post-body").text
-    question["Views"] = q_soup.select_one("div[title*=Viewed]").text.split()[1]
-    question["Votes"] = q_soup.find(
-        "div", class_="js-vote-count flex--item d-flex fd-column ai-center fc-black-500 fs-title").text
+    try:
+        question["Title"] = q_soup.find(
+            "h1", class_="fs-headline1 ow-break-word mb8 flex--item fl1").text
+        question["Description"] = q_soup.find(
+            "div", class_="s-prose js-post-body").text
+        question["Views"] = q_soup.select_one(
+            "div[title*=Viewed]").text.split()[1]
+        question["Votes"] = q_soup.find(
+            "div", class_="js-vote-count flex--item d-flex fd-column ai-center fc-black-500 fs-title").text
+    except:
+        pass
 
     answers = q_soup.find_all("div", class_="answercell post-layout--right")
     for i in range(len(answers)):
@@ -110,6 +114,7 @@ def export_data(tag=""):
 
 if __name__ == "__main__":
     # Scraping Stackoverflow using existing tags related to web automation, ui automation, data scraping etc.
-    tags = ["ui-automation", "webautomation", "web-scraping"]
+    #tags = ["ui-automation", "webautomation", "web-scraping"]
+    tags = ["automation", "screen-scraping", "web-crawler"]
     for t in tags:
         export_data(t)
