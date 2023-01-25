@@ -1,0 +1,852 @@
+Title,PostCount,ReplyCount,Excerpt,tag
+About the IT Automation category,2,0,"Everything about our IT Automation packages. 
+As a first step in our IT Automation roadmap,  we’re excited to announce our VMware activities package is now available in public preview!  This initial set of 11 activities &hellip;",it-automation
+"To set the date in the date field, using 'ALTERIFDISABLED=TRUE'",4,0,"Hi all,  I am able to set the date in the date field, using ‘ALTERIFDISABLED=TRUE’ but when ‘Apply filter’ is activated, it is not filtering records accordingly and wrong data are displayed. Urgent. Please help",it-automation
+Amazon Web Services (AWS) Activities are now in Public Preview,79,55,"Amazon Web Services (AWS) Activities are now in Public Preview
+
+
+Update!
+
+This activity is now available on the Official Stable Feed:
+
+
+
+Description
+UiPath.AmazonWebServices.Activities package offers activities for Amaz&hellip;",it-automation
+Data Migration,10,6,"Is it possible to automate the data validation process, post data migration using UiPath?",it-automation
+"How to set KEY/Value pairs as ""x-www-form-urlencoded"" type in ""HTTP Request"" activity in uipath",8,5,"How to set KEY/Value pairs as “x-www-form-urlencoded” type in “HTTP Request” activity in uipath? 
+WE are making a API call using postman which works fine in postman as shown below: 
+  
+in the above postman request we are&hellip;",it-automation
+Read data from excel!,6,2,"How to read the data from Excel into a data 
+table in UiPath",it-automation
+UiPath Cross browser Testing,9,3,"How to use the single script designed in uipath to run in multiple browsers? 
+
+I will pass the browser variable in datasheet and it should run in that browser. 
+2.The selector content for each browser seems to change as &hellip;",it-automation
+How to open another Tab in chrome browser,3,0,"Hello all. I need to open multiple url and need to type user and password in different format. 
+When I use type into activity for selecting user in new opened tab it is not selecting proper selector",it-automation
+How to enable Allow in Incognito and Allow access to file URLs in Chrome extension using CLI?,2,0,"Hi all 
+I need to validate and enble below 2 toggle button in chrome extension using CLI. 
+1)Allow access to file URLs 
+2)Allow in Incognito",it-automation
+PDF to Excel: Multiple RegEx matches in multiple columns,13,8,"Hi everyone, 
+I’m very new to UiPath and programming as a whole, so I don’t have a lot of experience in this. 
+I’m trying to create a program, that reads a single, random PDF-file, datascrape using regex and writing the &hellip;",it-automation
+Chrome is not coming to foreground,9,5,"Hi all, 
+I am using use application/browser activity. I have added screenshot of the properties of activity. 
+even though resize window property is Maximize, chrome is not coming to foreground. any suggestions???",it-automation
+IT Automation Activities for Microsoft Exchange Server,11,5,"Update!
+
+This activity is now available on the Official Stable Feed:
+
+
+
+Learn more about it here :point_down:
+
+Description
+UiPath.ExchangeServer.Activities package offers administration activities for Microsoft Exchange&hellip;",it-automation
+Is it possible to extract the contents of PDF and include it into an email body to be sent?,3,0,"I have currently scheduled an automated report from a reporting server, however it always sends the report as PDF attachment. I would like to have the PDF content just immediately pasted into the email body and then forw&hellip;",it-automation
+How do i create a login for any website,7,4,"I’m trying to make the URL , username a variable.",it-automation
+How to Check Today's is Third Thursday of month or not,3,0,"Hi all, 
+I have one doubt How we can check today’s is 3rd Thursday of month or not. Kindly to get solution",it-automation
+Azure Active Directory (Azure AD) Activities are now in Public Preview,27,14,"Update!
+
+This package is now available on the Official Stable Feed:
+ 
+
+
+Azure Active Directory (Azure AD) Activities are now in Public Preview
+
+
+Description
+UiPath.AzureActiveDirectory.Activities package offers activiti&hellip;",it-automation
+Robot login with SSO,2,0,We have a application (software client)  that uses SSO at login. Is it possible for a robot to login in a such application when the UiPath is already running as poweruser?,it-automation
+Automate google search with data from excel,3,1,"Hi all 
+I have a database of words to Google and scrape the data that comes up. 
+I can figure out the scraping portion but I am unable to automate the search process. 
+So the flow would be like 
+Extract word from databas&hellip;",it-automation
+Excel manipulation to get top 15 from data,16,6,"Hi team, i have a raw data here i have to get top 15 vendors by the item count value, how can this be done",it-automation
+How do I put UIpath project to run in a C: drive server without getting errors,11,6,how do I put UIpath project to run in a C: drive server without getting errors,it-automation
+Using UiPath Libraries in Visual Studio,2,0,"So I imported some UiPath nupkg in a Net Framework 4.8 WPF Project, specifically the UiPath.Core.Activities and imported the UiPath.Activities.Contracts DLL which is required. 
+I have written this code: 
+        Initiali&hellip;",it-automation
+Read hand writing on PDF File - OCR,2,0,"Dear Friends 
+Please help to extract this hand written PDF data to excel or word as part of automation process. 
+You advices are highly appreciate 
+  
+Thanks",it-automation
+Need to click on an element on the 2 window,9,3,"Hi 
+I am unable to click “All time” using click option 
+I tried attach browser , recording but in vain 
+I need to close the window too not the browser. “Close window” activity closes the browser itself",it-automation
+After executing query excel is corrected have any solution?,3,0,in Excels DB  actually  Query is working perfectly in SQL Query Executer,it-automation
+Question regarding REGEX,8,4,"I am reading all the data from a PDF, I want to find a string example “Tax ID: RO874231” from it using Regex. 
+The one which I am using is “(?&lt;=Tax\sID)\d+”. It does not work 
+Please let me know the correct regex",it-automation
+Problem Creating Mailbox,5,2,"@ovidiuponoran 
+After creating the user in AD (with user principal name) by using the Create User activity available inside the ActiveDirectoryDomainService Package successfully, the Create Mailbox (Exchange Server) acti&hellip;",it-automation
+DU Framework - Skip waiting process for human validation,4,2,"I want the processing to continue without waiting for a validation.  What should I do? 
+Best regards,",it-automation
+Regex Match For /,12,7,"Hi Devs, pls can anyone help me with regex expression to match /, I have used in my code but it’s not getting / from for each row data",it-automation
+Not able to assign a variable to one of the header in HTTP activity,3,0,"I am trying to get cookie during runtime from a website and got the output to a variable, used the same in writeline activity and able to see the values in console. But when I am trying to pass the same variable as a val&hellip;",it-automation
+How can I get the directory to a Application,3,1,I’m looking to find a solution where I want get the apllication path  before I use it to work in all computers regardless of where the application is installed,it-automation
+Retrieve insert Id from Insert Record-UiPath Salesforce activity,2,0,"Hi , 
+Is there any option to retrieve id of the inserted record from Insert Record-UiPath Salesforce activity",it-automation
+REFramework : Object reference not set to an instance of an object,3,0,"Hi All, 
+We are using REFramework without queues. Transaction item will be based on number of rows in excel input file. We want to assign below values of input excel to variable in Assign activity but its throwing an err&hellip;",it-automation
+Project is stopped and not create any log,11,7,"Everyday, Uipath project is running automatically, but sometimes when [login ] activity login into the other web, [login ] activity don’t start  and not create any log too. Although i used [try-catch] activity in this ca&hellip;",it-automation
+UiPath NetIQ eDirectory Activities are now in Public Preview,10,4,":loudspeaker: UPDATE 
+UiPath.NetIQeDirectory.Activities 1.0.0 are now available on the Official Feed 
+
+
+Description
+UiPath.NetIQeDirectory.Activities package offers cross-platform activities for LDAP (both eDirectory an&hellip;",it-automation
+Microsoft Hyper-V Activities are now in Public Preview,7,1,":loudspeaker:  Microsoft Hyper-V Activities are now in Public Preview
+
+Description
+UiPath.HyperV.Activities package offers activities for Microsoft Hyper-V virtualized infrastructure. 
+This set of activities enables IT &hellip;",it-automation
+Google Cloud Platform (GCP) Activities are available for Public Preview,2,0,"Description
+
+Update: :loudspeaker: :loudspeaker::loudspeaker: Google Cloud Platform activities are now available on the Official Stable Feed!
+In addition to existing activities for managing virtual machine instances, it&hellip;",it-automation
+Input dialog features:,5,3,"Hi there, I’m passing a list of strings to a dropdown menu in the Create Form activity. Does any one know if it’s possible to select multiple options from this list? 
+Thank you in advance!",it-automation
+How to connect to SAP,3,0,"How to connect to SAP logon pad. 
+I am getting this error while opening the application",it-automation
+How to Update object properties in Active Directory,4,1,"i need help with the input in the properties field. What am i supposed to type in 
+InArgument? 
+Do i have to create a new Data Table here and assign in to a variable or can i just write: 
+InArgument&lt;DataTable(“Display Na&hellip;",it-automation
+Cannot access application 'pgmessagehosttext.exe.' Elevated privileges might be required. Try running the UiPath application as an administrator,2,0,"I’m trying to automate an RDP process. I started UiPath studio as admin on my local machine. From the Studio, I was able to RDP to a remote server, log in to the remote desktop with an account from a different domain. Th&hellip;",it-automation
+Stuck on parsing date with different format,10,3,"I have dates in excel in format as 
+10_Oct_2012 
+5_Sept_2015 
+01_Jan_2012 
+After reading excel 
+Using for each row to iterate… 
+I’m trying to parse the date using 
+DateTime.ParseExact(DateAsStr, “d_MMM_yyyy”, System.glob&hellip;",it-automation
+"Pass a variable as condition in If activity, where variable contains complete condition as a string",11,7,"Hi, 
+I want to pass a variable as condition in If activity, where variable contains the complete condition as string. 
+Like - 
+My condition is assigned to the variable - 
+variable1 = ‘row1.item(“Name”)=row2.item(“Name”)’ &hellip;",it-automation
+Active Directory Set User Expiration Date,5,1,"Hi, 
+I have some user in active directory that have an expiration date, i want to clear Expiration date to be never, i tried to use nullable datetime and put value null in a value for “set user expiration date” activity &hellip;",it-automation
+Azure Activities now in Public Preview,53,36,"Update
+
+This package is now available on the official feed!
+ 
+
+Description
+UiPath.Azure.Activities package offers activities for Microsoft’s cloud, Azure. 
+This initial set of 50+ activities enables IT Departments to ea&hellip;",it-automation
+Office365 activities OneDrive,4,2,"We are using the The Microsoft Office 365 Files activities provide methods to search for files, in particular &quot; Find Files and Folders) 
+The Robot is connecting to Windows 10 with Console session (Login to console is ena&hellip;",it-automation
+IT Automation Activities for VMWare,31,18,"Update!
+
+This activity is now available on the Official Stable Feed:
+
+
+
+Learn more about it here :point_down:
+
+As a first step in our IT Automation roadmap, we’re excited to announce our VMware activities package is now&hellip;",it-automation
+Edit PDF Digital Forms,9,5,Hi is there any way to Edit Digital PDFs using Uipath?,it-automation
+Proxy script edge browser sessions,2,0,Hello. I am looking to find a way to automate and check the browser settings on Edge in the init stage of an RE Framework Process. The download settings and cookies and permission settings have to be manually set up to d&hellip;,it-automation
+How do I get the path of the VM. Is there a way to get all the VMs in that vCenterServer,22,18,"Hi @ovidiuponoran, 
+We are experimenting with this beta version.  How do I get the path of the VM. Is there a way to get all the VMs in that vCenterServer. 
+Thanks, 
+Ashok",it-automation
+Azure Windows Virtual Desktop (WVD) Activities are available for Public Preview,2,0,"Description
+UiPath.AzureWindowsVirtualDesktop.Activities package offers activities for Azure Windows Virtual Desktop (WVD). WVD is a desktop and app virtualization service that runs on Azure cloud. 
+This set of activiti&hellip;",it-automation
+How to identify week day for a date?,5,1,"I need to find a weekday for a date. 
+example:- 
+Date= (08/03/2021) then return value should be Tuesday/3(0-7). 
+0 will be Sunday 
+1 will be Monday so on",it-automation
+Can a headless browser submit a file on the server?,3,1,"I have a modal form that is filled in by folks interestred in buying a home and once its filled in i need to get it loaded to a different form and submitted to the final destination. 
+I have saved the field data on hard &hellip;",it-automation
+Oracle script exection- PL/SQL procedure,2,0,"Hi Team, 
+I need to execute the below script in uipath, connecting using connection string. 
+Not able to get the output as expected: 
+[11:11] Sait, Girish 
+SET SERVEROUTPUT ON 
+DECLARE 
+CURSOR cur_wtn 
+IS 
+SELECT ref_id_&hellip;",it-automation
+IT Automation Samples and Learning,18,9,"That’s a great news from Uipath… 
+Expecting few more samples for easy learning. Which activity we can use for updating the details(for eg: phone number, address etc) while user creation? Plz share samples if possible. &hellip;",it-automation
+How to move Files from one folder to another?,8,1,"Hi, 
+I am trying to move few files from a folder to another. I could not use Move Files option successfully. It asks for File name in the From field (but the properties panel shows it as path). When it is run, it conside&hellip;",it-automation
+Amazon WorkSpaces Activities are available for Public Preview,4,0,"Description
+UiPath.AmazonWorkSpaces.Activities package offers activities for Amazon WorkSpaces. Amazon WorkSpaces is a Desktop-as-a-Service (DaaS) solution that can be used to provision Windows or Linux cloud-based virt&hellip;",it-automation
+Attach window performing in actions in sap,3,0,Do we need to use attach window when performing the actions in sap?,it-automation
+Need help to identify the variable type for the word having string with number,6,4,"Hi Team, 
+I am a newbie to this UI_Path automation technology, I am trying to create logon sequence where I have to provide user name as string+number, Kindly suggest the appropriate variable type for this",it-automation
+How to establish a Connection for mainframe (QWS3270 Secure),17,14,"Hi, 
+I am new to mainframe. Please help me to establish a connection in qws3270 for the terminal type IBM-3278-2. 
+I have tried using ‘UiPath Internal’ option with hostname and port 
+and “IBM ELLHAPI” option with winhlla&hellip;",it-automation
+Comparing data in two different databases,5,1,"Hi, 
+Here is my testcase that needs to be automated. 
+There is a schema in oracle db that needs to compare with a table in Microsoft sql developer using UI path… 
+Can anyone help me with this scenario? 
+Note: i am a begi&hellip;",it-automation
+Query for multiple windows login,1,0,Is it possible to login unknown Windows machine (in or out of domain) with admin credential and take screenshots once checks on system is done?,it-automation
+Reboot AWS EC2 instance using UiPath,5,3,"Hi - Is there any UiPath activity which can help in rebooting an AWS EC2 instance? 
+Thank you.",it-automation
+Raise a ETL job Request in Tidal to load changes from Oracle to Sql DB's,1,0,"I have a scenario to be automated in UIPath studio Pro Community using “Test Automation” 
+1)Raise a request to run the &#39;oracle to Sql &#39;DB–&gt;ETL job request raised in Tidal 
+2)Verify the ETL job has completed normally–&gt;The&hellip;",it-automation
+Redis-server.service start operation timed out. Terminating,3,0,"Hi Team, 
+When I try to start redis-server service, I am getting following error message(I have attached error message). 
+Please give me a suggestion to solve it. 
+
+systemctl status redis-server.service
+● redis-server.se&hellip;",it-automation
+Featured and non featured items,3,0,"Hi all, 
+this is my first post,I  have been learning uipath and  I have got lots of info after going through different posts,I would like to  know how to get selector information for featured and non featured items of &hellip;",it-automation
+Automatic setup of virtual machines,2,0,"Hello guys, 
+We have a case that the number of Virtual Machines where the bots can run is increasing. So, I want to know if someone is using a kind of script to run in each machine to do the configuration of the windows &hellip;",it-automation
+Download File activity failed to capture the file output,15,13,"This question is to be answered by UiPath architect team. 
+@developers - please excuse. 
+Issue - The ;download file’ activity is randomly (or occasionally) failing to capture the output file. We did all the possible ways&hellip;",it-automation
+Add Tenant disabled in uipath cloud,4,2,Add Tenant is disabled in the cloud portal and I am unable to launch my orchestrator. It was deleted accidentally. Could someone assist on how to fix this please.,it-automation
+SAP Business One Automation with UiPath,2,0,"Any good links for studying SAP Business One Automation with UiPath. 
+I am new to this actually, 
+any good resources will help. 
+thanks, 
+varun.",it-automation
+Connect to Fire-base Database,2,0,"Hi All, 
+I am try to connect with firebase database into my bot with the Firebase Connector , But I can’t able to connect it. 
+Please guide me to connect with the Firebase. 
+Firebase connector scope activity has two inpu&hellip;",it-automation
+Jenking CICD UiPath Pack. Failed to run command,9,4,"Getting below error for jenkins UiPath Pack build action 
+Extracting cli to temp folder C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins.jenkins\workspace\UiPathProject@tmp…done! 
+[net461] $ C:\WINDOWS\syst&hellip;",it-automation
+Hosting UIpath in Client Network,2,0,"Hi Experts, 
+we have received an approval from Major client to have UIpath in client Environment, However, the client has informed that they new to this technology and do not how to do this, and asked us to provide below&hellip;",it-automation
+To check if row contains more than one code,12,7,"Hi, 
+After scrapping the value and write it to excel file , I want to check if row(0) contains multiple code like (h1, h4,h6) i want to proceed . 
+I’m not sure how to write in if condition row(0).toString={“h1”, “h4”} 
+  &hellip;",it-automation
+Input zero value in field on all populated rows in Web app,6,2,I need to input zero value on a field ‘% utilization’ on all display rows in Web app.  There can be one row or multiple rows and I need the bot to input zero in the field.  What do I need to do to accomplish this task?  &hellip;,it-automation
+UiPath Orchestrator Not Connecting,11,6,"not able to connect to UIRobot , UIOrchestrator with my UIStudio. 
+have done everything correct but still the same issue. 
+does machine name,  username and domain name are case sensitive ? 
+Couple of days back it &hellip;",it-automation
+Could not read data from website,10,5,"I am trying to read data from the a website and have defined the selector as mentioned below but the data is not read and I get the error in the screenshot. Appreciate assistance. 
+  
+Below highlighted are the data that &hellip;",it-automation
+Google Chrome Extension not working. Trying to capture a rightclick menu. Extension not installed message keeps popping,5,1,"I am using the latest version of chrome, uipath and windows 8  . I have installed the chrome extensions many times still while recording i get the error extension need to be installed or activated. Chrome version is  84.&hellip;",it-automation
+Assets ( Single Value ),5,2,"Can anyone please help me know how to look out for single value option in assets . 
+at present I am only able to create per robot value. 
+Thanks,",it-automation
+Cannot find HotKeyTrigger Activity under Monitor events activity in Latest version of UiPath 20.10 ( Manage Packages),2,0,"cannot find HotKeyTrigger Activity under Monitor events activity in Latest version of UiPath 20.10 
+also tried looking in Manage Packages but all in pain… 
+can anyone please help ?",it-automation
+Azure DevOps build generates library package without .dll file in it,7,5,UiPath Pack created nuget package for a library type project but does not have a dll file within it. It gives no error as well. This seems to happen only when I use “Invoke vba” activity. Otherwise it does the job correc&hellip;,it-automation
+Ho to identify and click on a link based on a text,11,9,"Hello! 
+I want to click on a link based on a text I intend to read. But the activity doesnt recognise the text &amp; I also need help on tagging the corresponding link to be clicked. Appreciate your assistance. 
+Below is the&hellip;",it-automation
+Error --> Bulk Add Queue Items: Operation returned an invalid status code 'NotFound',3,0,"I get the below error when I am trying to add items to queue. 
+Queue Name is valid and exists. Robot is provisioned. But the queue is not identified while the process is run. Any idea anyone? Any help would be appreciate&hellip;",it-automation
+"In middle of execution ""UiPath automation extension"" getting disabled",1,0,"Good Morning Everyone! 
+Recently i have upgraded my chrome browser from 77.x to 80.x,  after that am noticing chrome browser uipath extensions is getting disabled in middle of execution and throwing exception as “Cannot &hellip;",it-automation
+What is OKTA?,2,0,I am going to take the OKTA Course Can any one tell me what is OKTA? and what is the future in OKTA?,it-automation
+I need to capture KYC using OCR reading of Country ID submitted by customer,3,0,"I need to capture KYC data using OCR, reading of Country ID, these will be submitted by customer through their mobile so these images can be in any size dimension wise. What is the right solution for such requirement usi&hellip;",it-automation
+On image appear probleme,2,0,"hello guys I am trying to use the event on image appear within my automation but it doesn’t work. It acts as if the image selected wasn’t on the screen. 
+I want to use this to tel the robot thaht when that picture appear&hellip;",it-automation
+One process should be executed by multiple robots,3,0,"Hallo, 
+today I would like to ask how you would solve a problem like this. 
+Imagine the following scenario. You have a finished process and you want multiple robots to perform this process at the same time. You can defin&hellip;",it-automation
+How to read more than 100 items with Get Queue Items,6,4,"Could someone assist me with a sample of reading more than 100 items from a queue. 
+I read from the cforum that Pagination &amp; reference properties of ‘Get Queue Items’ can be used to achieve this but couldnt figure how to&hellip;",it-automation
+SAP selector screen after transaction,5,1,"Hi Gurus, 
+As you all know SAP will remember the last visited document number in its transaction. When my robot enters the transaction in SAP eg IW52, SAP captures the last processed document number and thereby the robot&hellip;",it-automation
+For Each Loop : Object reference not set to an instance of an object,26,19,"Hi, I get the below error when I am trying to read excel files one by one using for each loop and write to queue using reframework. I am invoking WriteDataToQueue.xaml from GetTransactionData.xaml. 
+For Each: Object refe&hellip;",it-automation
+How to retrieve the last cell of a coulmn where each coulmn in the excel have different length,4,1,"Hi Team, I am trying to retrieve the last cell of a coulmn and in my excel sheet I have different lengths of coulmn… so I am not able to use the row count formula to get to the last cell of a specific column. Any help wi&hellip;",it-automation
+Copy duplicated rows of a datatable into another datatable,6,2,"Dear everyone, 
+I need help here. 
+I have everyday around 5000 rows of which I need to identity the duplicated row based on the value of a specific column, say “column 1”. I tried the following expression and it works fo&hellip;",it-automation
+PDF Creation,5,2,"Hi , 
+I do have a text file, now i need to convert this to PDF, 
+The issue is in text there is no logo, 
+However pdf file which i need to create has many logos and images. Is it any way i can do this through uipath",it-automation
+No text is wrtitten in Notepad,9,4,"Hi, 
+I’am just strting UIPath. 
+So I have began the first tutorial “Creating a Basic Process”; 
+I follow, I think exactly all the steps. 
+I validate that there is no errors. 
+I launch with F5. 
+
+
+The browser with Advance&hellip;",it-automation
+Can we hand;e CEF pages using UI Path?,2,0,"We have a windows desktop application where we have embedded CEF pages. We have some ribbn cordiantes which on clicking opens an embedded chrome page. Is automation of such pages possible using UI Path ? 
+requesting you &hellip;",it-automation
+How can I integrate adding items to queue in RE Framework before Get Transaction Data is executed?,6,3,"Hi, 
+I am using REFRamework to build a process. I want to add items to queue. I added this as part of Process.xaml initially. But I realise that the GetTransactionData.xaml looks for data from queue before performing the&hellip;",it-automation
+How to pass variables dynamically in connection string,9,5,"Hi im using excel as automation and used OleDB connection and the below is my connection string 
+“Provider=Microsoft.ACE.OLEDB.12.0; Data Source=“C:\Users\Muthulakshmi\Downloads\Requester_1.xlsx”; Extended Properties=‘Ex&hellip;",it-automation
+Remove paragraph symbol,2,0,"The following is the results of a get text from a web site. 
+ 
+I have tried a trim, which removed all the tabs and new line.  I can not find the character that represents the paragraph symbol in order to do a trim or spl&hellip;",it-automation
+Double Click Text :Cannot find the UI element corresponding to this selector,11,5,"Hello guys, 
+I am new to uipath and facing an issue here, when I am trying to automate the SAP application. 
+Scenario: 1) I am accessing  some T-code and then I click on Get variant icon. 
+2) A new window(Get Variant) op&hellip;",it-automation
+SAP random click on checkboxes,4,1,"Hello experts, 
+I have a scenario in SAP where I want to generate random clicks for the given checkboxes. It is in a matrix-like form where the click shall be made by the end-user. The catch here is that the checkbox mat&hellip;",it-automation
+Uipath Get Mail Message from Speciak Mail Group,3,1,"Hello dear forum members, 
+I would like to access outlook mail messages which comes to the specific company mail group. 
+For example 
+Main Mail 
+a.Inbox 
+b.Drafts 
+C.Sent Items 
+and so on. 
+FactoryMailGroup 
+a.Inbox 
+b.D&hellip;",it-automation
+How to write data to excel using each row activity?,3,0,"Hello, 
+I have the below excel data format which I have to update. 
+ 
+
+Read the excel sheets one by one
+Add to Queue
+Fetch transaction item
+Fetch latest stock price for the stock
+Write the latest fetched value in the spe&hellip;",it-automation
+How to write data to excel after reading data related to a queue item from website?,4,1,"Hello there, 
+I am trying to achieve the below but could not figure out how to write the data to excel after the previous activities. Appreciate help in resolving this. 
+
+Using For Each loop to read data from set of exce&hellip;",it-automation
+Web Automation for,2,0,"Hello Team, 
+I have a website in which every week the new file is uploaded . Now I have to automate in such a way that my process should check for new file every week and upload it in the destination folder. 
+Please help&hellip;",it-automation
+DataScrapping on an infinite scrolling page,6,1,"Hello, 
+I am new to UiPath and just getting started: 
+I would like to scrap data on an infinite scrolling page (the page keeps loading for new results when scrolling down to bottom of page). 
+Unfortunatly, the only answe&hellip;",it-automation
+Software Update,8,5,once the environment of the software changes so i i have to build activites again which i have created early for older environment?,it-automation
+Bulk Add Queue Items: Operation returned an invalid status code ‘NotFound’ - Error while loading to queue,4,1,"I get the below error when I am trying to add items to queue. 
+Queue Name is valid and exists. Robot is provisioned. But looks like, the queue is not identified while the process is run. Any idea anyone? Any help would b&hellip;",it-automation
+Automate the web service now Application,4,1,"My requirements is to automate the Service now Web application,my bot should open the service now Application in Web portal.if I have a 5incidents in my quee and I need to Loop the incidents one by one, open the Frist in&hellip;",it-automation
+Getting invalid path all in sudden on the screen and uipath tool getting closed,3,0,"Hi All, 
+Suddenly on uipath screen in miiddle of execution iam getting this message… 
+ 
+and when i verified in logs i also see below meesge . 
+Can some one help me how to  resolve this issue.Every time tool getting close&hellip;",it-automation
+Default activity size,1,0,"Hi all! 
+I create a custom activity using “activity creator”. 
+How I can change default size this activity using .xaml ? 
+for my projects, i trying create MINIMAL size activity for flowchart. 
+This activity needs to do n&hellip;",it-automation
+Error while trying to read a range from excel,9,5,"Read Range: The process cannot access the file ‘****CustID_1111.xlsx’ because it is being used by another process. 
+*** is the path. 
+The excel is not open but this error is thrown. Does anyone have an idea why this is h&hellip;",it-automation
+Windows server or windows 7 configuration setting for UiPath,11,8,"Hello,. 
+i have a lot questions from our Client especially from IT Division about configuration that we have to comply before implemented UiPath in their system. and most questions related for Windows server and windows &hellip;",it-automation
+I can't get data scraping to return any data,5,2,"Hi all, 
+I’m pretty new with UiPath. This is the first issue I haven’t been able to resolve. I’m trying to get a data table from a web page (I would provide screenshots but I’m worried I could be violating some sort of n&hellip;",it-automation
+Getting UI Element or Selector not found exception,6,1,"Hi, 
+I am facing an issue (i.e. UI element or selector not found exception). Actually, I am trying to extract the table’ data(basis on which I have to take some decisions) from an internal website. This data is coming fr&hellip;",it-automation
+"How are the attended bots deployed,triggered in production?",1,0,"How are the attended bots deployed,triggered in production?",it-automation
+Read large text file,4,1,I have a large text which i want to read the size of the file is 1.5 MB. when i try to use the read text file activity i am getting error due to large size. The text file contain some meta data in the starting and later &hellip;,it-automation
+Books recomendation to read?,2,0,"Hello everyone, im searching for an RPA related book to read. Has anyone a specific book you would like to recommend to read ? Thanks.",it-automation
+Is this a better approach to develop multiple flow with different scrapping frequencies in one(Main.xaml)?,5,1,"Hello All, 
+Hope all of you are doing great! 
+I have a doubt related to my project. 
+i have to do the scrapping from  11 portals, and overall scrapping scenario is around 40, then scrapped data have to push into sql serv&hellip;",it-automation
+Terminal (internal) to AS400 over SSL,1,0,"Hi everbody, 
+Im trying to connect to AS400 over SSL/TLS using terminal activity with 5250 emu type, i can only establish connections to system running without encryption but when i need to use it to AS400 running with S&hellip;",it-automation
+ML/AI Integration with UIPath,3,1,"Hi Everyone, 
+I want to know how can I integrate Uipath with ML/AI. What all packages can help in it? 
+and Whether they can work in community version or need enterprise version .",it-automation
+HTML INPUT ELEMENT TYPE ISSUE,9,6,"Hi, 
+I am getting error when trying to record a click on a file browse element on Internet Explorer. Screenshot are given below:",it-automation
+Outlook Automation - I want to automatically open locally saved outlook emails and save and export their zip file,3,1,"Hello! 
+I currently have a locally stored folder of 50+ outlook emails which each have a zipped file I want to download, extract, and change the file type ***.unl to ***.dsv. 
+I was able to build a basic workflow to wher&hellip;",it-automation
+Guidewire ClaimCenter 9 New Claim Selector Issue,2,0,"Hi All, 
+Recently we are planned to Autoamate the Guidewire ClaimCenter 9 - Creating new claim process. but we stuck in the very beginning step. We are not able to select the Newclaim from Claim Tab. We tried many ways n&hellip;",it-automation
+Check the attribute (aaname) of UiElement using If Activity,6,2,"There is an UiElement having selector: 
+
+
+
+I want to check that this selector contains aaname value as that of entered by the user which stored in variable “WorkID” using the “IF” activity. Can anybody help me with this? &hellip;",it-automation
+ML Activity issue with recognition,2,0,"Hi I am having a problem with ML Activity 
+It can not see a dot when extracting number 
+  
+Is there a possibility to fix this somehow? 
+Can you improve a AI model to include that item in training set of a model so the ne&hellip;",it-automation
+Problem with UiPaht Studio auto recorder,5,1,"Hi. 
+While on the UiPath Studio recorder, pressing esc to stop recording exits the recording, but does not record. 
+Can you help me with this. 
+Thank you",it-automation
+Can I add image screenshot into the outlook email body?,2,0,Can I add image screenshot into the outlook email body?,it-automation
+How to fetch orchestrator jobs start time and end time from odata swagger UI?,1,0,I’m not able to get previous day run start time and end time using odata swagger UI.,it-automation
+Https://www.iopex.com/case-study-aws-cost-optimization,1,0,Find out how iOPEX helped a leading US based Digital Ad Marketing company reduce their AWS expenses by 22%,it-automation
+Computer Vision Server API Key missing or Invalid,9,5,"Error message: Server API Key missing or invalid, Please copy it from the licenses page on cloud.uipath.com [401]. 
+my settling as: 
+ 
+the API KEY is copy from: 
+  
+and project dependence is :slight_smile: 
+ 
+all latest &hellip;",it-automation
+Window application - UI element not recognised. Entire window identified as single element,9,3,"Hello, 
+I am trying to automate a window application but the entire application is identified as single element. Selectors doesn’t recognize each objects such as username, password etc. 
+I tried changing the UI framework&hellip;",it-automation
+AD Server connection error,3,0,"Hi, 
+for one of our project i was doing a POC, for which we needed to connect with the AD server and check the user exists or not. 
+i’ve use AD Scope activity and provided all the details. But while executing i’ve been g&hellip;",it-automation
+"Firefox ""Warning: Potential Security Risk Ahead""",8,6,"Hi, 
+I’m trying to get passed the certificate error page of Firefox with the displayed message “Warning: Potential Security Risk Ahead”. 
+I use a find element for the advanced button, save it in a variable, then use an I&hellip;",it-automation
+AI fabric - when it can be used with free community version,1,0,"Hi, 
+AI fabric - when it can be used with free community version , right now it requires Enterprise licnese, if we go ahead with it, would we be able to still use community version for free ? 
+Regards",it-automation
+Share point folder creation and permssion enabling from sql DB,1,0,"HI all 
+The requirement is to create a folder structure in a share point and provide permission(like read write permission) also, but the input will be form sql DB , has anyone met with a similar requirement Before pleas&hellip;",it-automation
+Change data type from text to integer in a data table before pasting in excel,2,0,"Hi, 
+I am reading an excel data table, then doing calculation and writing the new datatable in excel. However, it writes in excel as Text and not numbers. 
+How can I change in my data table that a specific column should &hellip;",it-automation
+Process from Studio to Robot,7,5,"Hello everyone, 
+I’m working in an environment where I have 2 systems. 
+1 Studio on a test/development hyper-v machine 
+1 Robot on a live/production hyper-v machine 
+Running version 2018.2.3 on both systems. 
+No Orchestr&hellip;",it-automation
+Citrix Automation for PDF Files,2,0,"I would like to extract data from PDF files, which are on Citrix folder. Is these possible with UI Path.",it-automation
+Computer vision and ocr is available in mobile automation?,9,6,"Hello guys, 
+I want to automate rdp in mobile app how to do that… Please let me know… 
+Also I see in community edition there is no computer vision and ocr activities to automate rdp in Mobile 
+Urgent please let me know",it-automation
+Return some ID created in an Application by RPA bots to the application which has trigerred Bot,1,0,"I have an application which will be initiating UI path BOT using Orchestrator. Bot once initiated will create new record and application will assign new unique ID for the same. 
+Bot has to pass this ID created to the app&hellip;",it-automation
+If: Column 'Age' does not belong to table DataTable,4,2,"Hi Everyone, 
+I am trying to do a simple Excel Automation wherein the robot would read and write data to an excel file, but when I run the robot I’m getting an error. Below is the screenshot. I hope you guys could help m&hellip;",it-automation
+Unattended Robot and User session automatic lock,1,0,"Hello, 
+I think there is something I don’t understand with the Robot setup… 
+My Robot run on a VDI computer (Windows 10), installed as a service. No Orchestrator. 
+On this VDI I open a user session to run an “agent”. A (&hellip;",it-automation
+Can we automate SSRS reports with UiPath?,1,0,"Hi Folks, 
+I need to automate a SSRS report which has a lot of data metrics in table form. Can we automate it with UiPath, if yes then how?",it-automation
+After uipath update: Input string was not in a correct format,9,7,"Hello I updated Uipath to the latest version. The supplier had developed billing automation for us, but it is now bankrupt. But at the place of “convert” now stops. Maybe you can help how this can be fixed? Thank you in &hellip;",it-automation
+Error report connecting Bizagi and Uipath,10,2,"Hello, 
+Recently, I’ve tried to connect Bizagi and Uipath, and I found the error because Uipath changed the way of setting tenant. 
+If I regularly register tenant using orchestrator like adding service, Bizagi failed aut&hellip;",it-automation
+AWS Activities,8,5,"Hi, 
+I have been trying to use Amazon activities . 
+When I was trying to launch an Instance from Template. I came across this error,Can anyone let me know what the issue is. 
+20.4.1 
+Source: Create Instance from Launch T&hellip;",it-automation
+Scrap informations from website to Exell,1,0,"Hi 
+I’m searching for a solution to scrap statistical informations contained  on www.statfoot.be  to an Exell sheet. 
+Can anybody help me?",it-automation
+UI Element identified and saved is lost/not available when workfile is accessed after a while,3,1,"Hello, 
+I created a simple flow of recognizing a webelement and performing some basic actions. I saved the workfile and accessed it after some days.  But the workfile doesnt have the webelement/image stored and says imag&hellip;",it-automation
+LinkedIn API - Developers,1,0,"Hello, 
+we are using the linkedin API to post jobs there. There has been no problem finding documentation about POSTING jobs but once we post the job, we want to retrieve applicants to see their profile. Is there any API&hellip;",it-automation
+Creating NuGet package during CI pipeline,1,0,"Hello, 
+I am currently evaluating the use of UiPath for automated GUI-Tests. 
+To create reuseable components we would like to group workflows into packages. 
+Now i want to create a package on our build server everytime c&hellip;",it-automation
+Clearing c drive space on the servers,2,0,"Hi there, 
+I urgently want a uipath code or bot of this topic&quot; clearing c drive space on the servers&quot;.please help if anyone has it. 
+thanks for help 
+regards 
+Mitul Choudhary",it-automation
+UiPath not able to recognize field element - Full pane highlight,4,1,"Hello UiPath Experts, 
+I am facing a weird issue while trying to automate my process in SAP. When I try to use click activity or type into activity, the UiPath is not highlighted that specific field I want to use instead&hellip;",it-automation
+Select Checkbox Firefox,3,0,"Hi all, 
+i am trying to select the: select all checkbox for the search results ont the following website 
+https://dl.acm.org/action/doSearch?AllField=RPA&amp;startPage=0&amp;pageSize=50 
+unfortunatley i can not validate the sele&hellip;",it-automation
+How to copy & paste values from income statement from excel to word document format,4,2,"Hi, I have a problem with doing Ui Path which is I am not sure which functions to use when copying values from Excel to Word document format. 
+For example, I am copying values from excel (P&amp;L) and I will need to paste it&hellip;",it-automation
+How to get the columnname of a specific value in a row without getting knowing the column name or row,9,5,"Hi, 
+I have a complicated task for me. We have this excel file that is being downloaded from a website, however, the columns in that excel file are inconsistent. 
+For example, sometimes excel file has columns A, B, C, D,&hellip;",it-automation
+How can İ get certain parts in excel and send it to queue,6,1,"Hey everyone, 
+In a excel document. 
+I would lıke to get the ID column values ​​where the values ​​in “product” column are equal to “unknown” 
+ 
+like this i want to send the values 4 and 9 to queue 
+Thanks in advance,",it-automation
+Workbook Password Protect,2,0,"Hello everyone, 
+I am trying to protect my excel workbook, I don’t want to use any third party activity. could somebody help me get resolve it through some uipath activity or thru invoke code. 
+thanks",it-automation
+IT Automation Activities for Active Directory Domain Services,31,20,"Update!
+
+This activity is now available on the Official Stable Feed:
+
+
+
+Learn more about it here :point_down:
+
+As the next step in our IT Automation roadmap, we’re excited to announce our Active Directory Domain Service&hellip;",it-automation
+How to configre Add incident activity for servicenow,1,0,"Hi All 
+I’m trying to add an incident in servicenow from uipath. I’ve configured uipathteam activities. inside servicenow application scope have added “Add incident” activity. Now how should I configure parameters for th&hellip;",it-automation
+Issue with ML Extractor - Items,2,0,"Hi 
+When I am using the intelligentOCR activities to extract information from a PDF, I am encountering an issue when for the items extraction. When I confirm the extraction for item table it will create a duplicate of th&hellip;",it-automation
+Clearing User's Listed Manager using ActiveDirectoryDomainServices.Activites,1,0,I am currently working on trying to set it so that a user’s manager attribute will be cleared or replaced empty. I am using an “Update Object Properties” activity for this action.,it-automation
+Activities for Microsoft System Center Orchestrator are now in Public Preview,2,0,":loudspeaker: Activities for Microsoft System Center Orchestrator are now in Public Preview
+
+Description
+UiPath.SystemCenter.Activities package offers activities for integrating with Microsoft System Center Orchestrator&hellip;",it-automation
+Automation to create a powerpoint presentation,4,2,"Hi Team, 
+Is there a specific activity or automation sequence that will allow me to create or build a powerpoint presentation? The logic is if i receive an email with a pre formatted template (excel sheet) on how many sl&hellip;",it-automation
+Robot not doing anything when it gets to Get Asset Activity,2,0,"Hello, 
+I am new to UiPath, so please forgive me, but I am encountering a strange scenario that I can’t seem to figure out. I am running Studio version 2019.10.3 and have published the code to my test orchestrator. I dow&hellip;",it-automation
+Collect many Data in DataTable in type Array and for use later in program,1,0,"Hello, 
+Here are  screen shot what I have already created in my program and what I want to create now. As you can see my robot ask me three times for all necessary data about order to send some emails to the customer. Af&hellip;",it-automation
+Use UiPath as a tool to test and generate KPIs for quality of group of websites,1,0,"I wanna create robots to fill survey forms for 200 website after run test case on website to check if website meet the KPI or not then fill the form , questions of API like . 
+1- If website have multi language or not can&hellip;",it-automation
+Form Activity Feature Requirement,1,0,"The Form Activity should have a topmost property. For it is a frequent used Feature in windows. 
+Thanks for reading.",it-automation
+Form File/Folder Activity Bug and Requirement,1,0,"Bug: 
+I’m using Uipath Form Activity 1.1.1. There is a bug of this activity. When I click the Select Button, it shows the file select dialog. Till now it is fine. The bug is  when I click many times before the file selec&hellip;",it-automation
+Statement Activities Required,4,2,"Now in workflow control items, there is no such an activities which is to execute a statement without return value. To achive this purpose I need to use an Invoke Code activity. Which need a lot of parameters setting wor&hellip;",it-automation
+Get Row items and write it in cells (by incrementing cell index),5,2,"I have 20+ SQL queries
+I have to execute that one by one
+Get the result (it is a numeric value)
+Store that in an Excel sheet.
+For example, the first query should be placed in B1, second in B2…Check the screenshot below.
+&hellip;",it-automation
+How to set calculation mode to manual within Excel application scope when opening an excel file?,3,0,"I have an excel which is full of formulae, 
+i noticed when i perform operations in excel scope like copy paste range and delete range its faster when the “Formula&gt;Calculation Options&gt;Manual” is selected. 
+ 
+I tried using&hellip;",it-automation
+Issue in getting the count of words,1,0,"Hi, 
+I am facing an issue while getting the count of the words… when i am increasing the space between two words then the count of the word is also increasing… 
+Screenshot_2020-05-15-19-04-03-708_com.android.chrome|230x5&hellip;",it-automation
+Help on Error HRESULT E_FAIL has been returned from a call to a COM component,8,5,"I am using ie 11 and want to click on the below link   
+however it throws this error   
+Error HRESULT E_FAIL has been returned from a call to a COM component 
+i have tried all the solutions suggested from previous questi&hellip;",it-automation
+VB.Net Regex,6,2,"Hi all, it has been a while since I asked a question here, I hop all is well, I have a question regarding regex, How can i replace a filenames with dates, now i know how to, i use this vb.net method: fileName.Replace(“.p&hellip;",it-automation
+Automating Micro Focus ALM,1,0,"I am attempting to automate usage of the Micro Focus Application Lifecycle Management (ALM) Quality Center (QC) system (Formerly from HP), version 12.55. I can successfully enter the user ID and password, the click Authe&hellip;",it-automation
+Extracting data from a datatable,1,0,"Hi 
+I am creating a procedure where i have a excel file containing hundreds of rows of data, however i only need access to a few rows, i have created a datatable reading in the necessary rows. 
+The next stage is opening &hellip;",it-automation
+Click text activity not working,5,2,I have list of acknowledgement numbers of different forms and have web page contains such numbers as hyperlink. I want to download one by one such forms but click text activity is not working. Please assist.,it-automation
+Web API,2,0,"Hi All, 
+I am trying to connect API with UiPath. I came across few examples and read that ‘UiPath.Web.Activities’ package should be installed to use HTTP request activity, however i am not able to find the package, I am &hellip;",it-automation
+Count no of words between comman separated words,2,0,"Datatable contains 
+A,b 
+A,c,b 
+U,k,p,j 
+Expected result 
+A,b 
+As it has only 2 letters 
+My req is to fetch the row which has least no of letters",it-automation
+User Creation in Orchestrator Database,1,0,"Hi Team, 
+Is there any way to provision a user account to login UiPath orchestrator using Database sql from backend. 
+We want to establish a process to request a access for Orchestrator and after going through approval r&hellip;",it-automation
+Integration of uipath with service now,1,0,"HI all, 
+can someone give me summary how the rest api integration is done between uipath and service now… 
+any video link is appreciated. 
+thanks in adcance:)",it-automation
+How To Keep UiPath wait till the Execute Query finished?,8,4,"I have a query that takes 20 to 30 mins to finish execution. I am using “Execute command” activity. But I see time out error. I also tried to increase Timeout in properties, but, it doesn’t work. Can anyone help please?",it-automation
+PDF OCR / UiPath Screen OCR Value cannot be null,1,0,"Hi, 
+Can anyone solve this problem? 
+I have this comment: 
+Read PDF With OCR: Error performing OCR: Value cannot be null. 
+Parameter name: source ScreenOCRErrorRunningEngine. 
+But I am sure that other OCR engine find tex&hellip;",it-automation
+Run SQL Server Job,1,0,"Hello everybody. 
+I am running a SQL Server Job (with the steps that would be executed manually), opening SQL Server Management Studio, entering the credentials, deploying the SQL Server Agent, finding the name of the Jo&hellip;",it-automation
+How to filter datatable using switch case activity,10,7,"Hi All, 
+I wanted to filter datatable using switch case activity, what expression should I write in switch. 
+Can anyone assist me on it. 
+Regards 
+Saurav",it-automation
+Trim only if the string is not null,3,0,I am writing a string to excel using the WriteCell as “string.Trim”. Now need to add a check whether its not null. Is it possible without using if condition?,it-automation
+Is it possible to select items in drop down based up on text in multiple images,4,2,"Hello All, 
+               Is it possible to choose the items from drop down in a web site based  upon text in multiple images.
+
+Thanks, 
+pranay.",it-automation
+Trying to get chatbot response and store data,2,0,i am trying to automate a chatbot in amazon lex . i am qetting sample questions and putting into a amazon lex chatbot .and trying to capture response for every question . is it possible ? . can we make the selector dynam&hellip;,it-automation
+Exit a job when a condition is met,3,0,"I want to exit a job when a certain condition is met. Not just simply exit a workflow but stop the robot complete. 
+Kind regards 
+Jos",it-automation
+SAP new vendor or vendor update process,4,2,"Hi, I am new to RPA and I’m wondering for such a standard process as SAP vendor creation or vendor updates (XK01 or XK02) whether there is existing RPA process that can be used to avoid reinventing the wheel. Thanks",it-automation
+Enhancing process speed,1,0,"Hello UIPATH, 
+Kindly assist with a recommendation on the following: 
+
+
+My organization’a robotic infrastructure are on a virtual machine; it seems the processes are slow. The RAM is 16GB, max of 2.7GHz processor speed, &hellip;",it-automation
+Screen scraping and get text is not working in citrix application,1,0,"Hi All, I have to all get a text in a dropdown list box of a Citrix application but when try to use get text activity it showing error message like below I also tried screen scraping but it’s not working please someone h&hellip;",it-automation
+Data scraping running in debug mode but not in run mode,9,6,"Hi Guys, 
+Data Scraping runs normally when in debug mode. However, when i run the code, it stops after data scraping and does not execute the next steps. I tried giving a bit of a delay after the scraping activity, but, &hellip;",it-automation
+Ejecutar Job de SQL Server,1,0,"Buen día 
+Estoy ejecutando un Job de SQL Server (con los pasos con los que se ejecutaría manualmente), abriendo SQL Server Management Studio, ingresando las credenciales, desplegando el SQL Server Agent, buscando el nomb&hellip;",it-automation
+Download multiple excel files from website then aggregate those files into one file,2,0,"I’m trying to download multiple excel files from a website then aggregate all those files into one file.  I’m new to UiPath and need some guidance on this issue. 
+Thanks, 
+Nathan",it-automation
+Error using Get Object from Amazon Web Services,1,0,"Hi guys, 
+I am trying to use Get Object to check if a Folder/Object already exists. When the Folder/Object exists, everything Ok but When the Folder/Object not exists Uipath break and show me the message below. I am usin&hellip;",it-automation
+¿Cómo abrir un archivo que comience por determinado nombre?,4,1,"Buen día 
+Tengo un archivo llamado “NombreArchivo 09-04-2020 12 54 p. m…csv” que tiene la fecha y hora de descarga. Necesito buscar el archivo para abrirlo y cambiarle el formato (pero la fecha y hora cambia entonces el &hellip;",it-automation
+UIpath API Http Request Problem,7,1,"Hi All 
+I have reached a roadblock 
+I have an api and I have put down the headers and all 
+The request perfectly works in postman and in my own python program which uses requests library. 
+I can’t work it out in UiPath. 
+&hellip;",it-automation
+Copy from excel and paste into a webform,8,2,"Hi Everyone, 
+I am a rookie for uipath. In my workflow, I have opened the webform, open the excel, I need copy and paste A1 into webform, then A2 then perform a click in webform. Anyone can help me with copy and paste fr&hellip;",it-automation
+BOT types,2,0,Can anybody has the idea what is mean by static Bot and dispatcher Bot?,it-automation
+Multiple PDFs Image Data Extraction,1,0,"Hi team! 
+I have some pdfs, all contain images in it. I want to extract the data from these images. I used Get OCR Text, Find Image, Click OCR Text, and different OCR engines like Teserract OCR, Google OCR, etc. But sinc&hellip;",it-automation
+Can the tooltip be refreshed dynamically on certain condition instead of a timer,1,0,"Hi All, 
+I am working on a POC for my client to create a bot which suggests and validates the data entered on an ERP form. A typical example can be a purchase request form. In the below screenshot you will be able to des&hellip;",it-automation
+Getting Error While trying to use Type in to activity at save as tab,4,1,"Hey guys, 
+Im trying to “save as”  a file but when ım using the “type in to” activity it gives the following error: 
+“Type Into ‘Edit’: Object reference not set to an instance of an object.” 
+I cannot use the UI Explorer&hellip;",it-automation
+Automation,3,0,"Hello, 
+I am a beginner in IT and in the RPA course. I have to automate a task, an email (from Outlook) must be registered in a CRM. Is it possible? Is there a tutorial for this? 
+Thank you in advance. 
+Gulbara",it-automation
+ReCaptcha reading text,1,0,"Hi Everyone! 
+Am facing issue in reading the recaptcha image/text. Any suggestions? or recommendations? 
+Cheers!",it-automation
+Important question,4,1,"Hi everyone. 
+Plz help me for the below use case 
+A folder contains some 300 excel files, and I need to append data of all excels together in one and below is my task to perform via RPA 
+
+Open folder
+Read first excel, cl&hellip;",it-automation
+How we can read data from config file,6,3,"Hello All! 
+I have config file .csv format. I have more than 2 urls with different username and password. 
+I need to access each URL and process my value. 
+Any Guide! 
+Thanks.",it-automation
+Unable to extract URL by data scraping in uipath,4,1,"hello, i am trying to scrape data from Resdex (https://freesearch.naukri.com/) using DataScraping. 
+When scrape URL for candidates profile, i dont get all the URL in the extracted datatable. Only those URLs are extracted&hellip;",it-automation
+"How to specify Internet Explorer's clicking to save, save as",9,4,"Hi everyone, 
+My robot downloads a file via internet explorer and ı want to ‘save as’ the document. 
+But when i cannot indicate the button it takes the whole tab how can i specify it. ( ı want to click the arrow next to &hellip;",it-automation
+How to save a file to a certain location after exporting,7,3,"Hi guys, 
+My process exports(downloads) a file from a website, but he file is automatically saved to the downloads folder but i want to save it to another folder. 
+how can i do it?",it-automation
+HTTP Rest API - Azure DevOps,1,0,"Hi All, 
+This action: 
+1.56 Read Copy From HTTP (HttpClient)		 
+EndPoint = QuerytoCopy	 
+Method = POST	 
+AcceptFormat = ANY	 
+BodyFormat = application/json	 
+Body = “{”“ids”“:[60674],”“fields”“:[”“System.AreaPath”“,”“Sys&hellip;",it-automation
+Azure DevOps Automation - (NOT for UI Path project version control),1,0,"Hi All, 
+Wanting to automate functions in Azure DevOps web app which is a different project. 
+Such as: 
+
+Creating new stories (work items) from data in excel
+Updating existing stories / acceptance criteria etc from data &hellip;",it-automation
+Error for move file to folder,10,5,"Hi, I need to check  number in excel file and if no error will move the file to a folder else will move to another folder. Below are the Ui path i trying and the error i get. Thanks .",it-automation
+Web scraping entire page,12,6,"Hello, 
+I need help with web scraping. 
+My goal is to scrape an entire page and save it to a txt file. Not just the page on the screen but the entire page. I have done some test and the Get Text activities (including the&hellip;",it-automation
+How to use if activity to check the number in excel file,5,2,"Hi, i am new in Ui path i need read number in excel and use if activity to show if number in excel more than 10000000 will show yes else show no, what condition should i put in the if activity. Below are the Ui path i tr&hellip;",it-automation
+Using A remote machine to build a bot,2,0,"Hi 
+I am trying to create a robot which will log into a remote machine and carry out a range of activities, at the moment the robot can successfully log into the remote machine however when its there doesn’t seem to want&hellip;",it-automation
+Windows Server Issue,4,1,"Hello, I’m having an issue with the UiPath UiAutomation everytime you try to go into select element mode, it throws this error: 
+ 
+The machine is Windows Server 2012 R2, it has desktop experience and .net framework insta&hellip;",it-automation
+Read Range not reading a formula,4,1,"Hi there, 
+I’m trying to add a “Read Range” activity in order to read from an excel that contains formula to check the remaining days based on the date from a different cell. Below is the Excel file that i’m trying to re&hellip;",it-automation
+How to Get an Process DataTable Items,11,8,"HI, That you in advance for the help here. I am currently building an automation and i am stuc not knowing how to proceed. I have a DataTable that essentially looks like this  
+It is a list of orders . The way the table &hellip;",it-automation
+ALM Integration with UiPath Tool,3,0,"Hi All, 
+Need help! 
+I need to Integrate ALM with UiPath Tool. (basically to update test status - Pass/Fail) 
+Can somebody help me how to do that? 
+Thanks in advance. 
+Regards, 
+Sujeetkumar Albal 
+9740561666",it-automation
+How to create a reusable Libraries which returns data and i can use that data in Test scripts,15,10,"Hi, 
+I’m new to UIPath Forum, In my Project we are maintaining Test data in Excel sheet. so to read that excel sheets we are creating a libraries and getting the data in Data Table but we are not aware how to Use that Da&hellip;",it-automation
+How do I create custom Activity which has looks similar to Build DataTable where user can add multiple rows (multiple instances) but columns would be certain arguments to a method,5,2,"Hi All, 
+@DeanMauro, @Forum_Staff 
+How do I create custom Activity Like Build DataTable with difference where user can add multiple rows by clicking on plus sign but columns are fixed. 
+Please share some sample code for &hellip;",it-automation
+How to select a specific task on a browser?,3,2,"Hi everybody, I’m starting my adventure with RPA I have a problem with my robot. 
+How to design a robot and select a specific task on a web page after clicking on the browser e.g.: I have five tasks of which I have to ma&hellip;",it-automation
+ID changing every time in SAP application,7,3,"Hi, 
+I am automating the SAP application using uipath. I am using basic recording activity in uipath. 
+But thing is ID in SAP application is changing every time. i used UI explorer to find other attributes like Parent id&hellip;",it-automation
+Excel sorting and removing duplicate,3,0,"Hi All, 
+I am working on automation of Excel where I need to sort the data in descending order and remove the duplicate. 
+The column on which I have to apply sort condition contains date. 
+So all data will be sorted in d&hellip;",it-automation
+Unable to get authentication token while connecting to orchestrator via powershell,12,6,"I am writing powershell script to create a tenant in orchestrator. In order to do that I am trying to fetch authentication token using below script, but it does not seem to work. 
+
+$authToken = Get-UiPathAuthToken -URL $&hellip;",it-automation
+Need help : Execution on webpage,4,1,"I have attached a webpage where I have to do certain operation. 
+I have highlighted an icon where I have to click and provide essential 
+information and save it. Same operation I have to do for each and every record. 
+Si&hellip;",it-automation
+Need to find new error line following the timestamp,3,0,"Hello All, 
+I have a text file with large number of error details, I need to extract the current error based on timestamp. 
+Whenever the file gets updated with a new error, We need to fetch the new error. 
+I have attache&hellip;",it-automation
+How do I Test my automation once I have generated output to a headless Chrome browser?,1,0,"Good morning UiPath Forum, 
+I am following up on my earlier post 
+What scenarios are benefited by using a Headless Browser?. 
+@Palaniyappan you were super helpful in your response. 
+I have followed through configuring my&hellip;",it-automation
+How to make dynamic path,9,6,How to make dynamic path so that it work on every where,it-automation
+Upload DLL in Manage Packages,4,2,"Hi, 
+I have one DLL file which I want to use it in my project. What should I do so that DLL file should come in “Manage Packages” and we can install in our Project?",it-automation
+Orchestrator available as PAAS from Azure marketplace does not support multi tenancy?,3,0,"I am using UIPath Orchestrator as PAAS from azure masketplace . This does not show the option for creating multiple tenants. 
+I have already tried setting tenant registration settings in Web.config file. 
+
+add key=“Tenan&hellip;",it-automation
+DEVOPS for UIPATH- Updating Process,7,4,"I am exploring on DEVOPS features for UIPATH projects. I have used Jenkins and able to build and deploy the package. 
+Once new package is deployed we need to update the process. Is there any way to automate or any comman&hellip;",it-automation
+"IT Automation activities (Active Directory, VMWare, Exchange, AWS) are now on the Official Feed",3,0,":loudspeaker: IT Automation activities are now available on the Official Stable Feed
+If you follow us closely, you might have noticed these five activities packages that were recently released for public preview: 
+
+
+Act&hellip;",it-automation
+Need to Migrate from Resolve Systems to UiPath,1,0,"Hi, 
+I’m looking to track down any documentation that details: 
+A) Is it possible to migrate from Resolve Systems to UIPath 
+B) How is it done 
+Any feedback would be greatly appreaciated",it-automation
+Insert Datatable to Database Table using UIPATH activity( using stored procedure or some other efficient way),3,0,I have a datatable DT with 25 columns .I want to insert the data from DT to sql table SQDT with same columns .I’m using Insert Query for now Is there a better way to approach this problem instead of using Insert on each &hellip;,it-automation
+Citrix Activities are now in Public Preview,11,4,"Update
+This package is now available on the official feed! 
+ 
+
+Description
+UiPath.Citrix.Activities package offers activities for XenServer 7.x and Citrix Hypervisor 8.0 virtualized infrastructures. 
+This initial set of&hellip;",it-automation
+Download Orchestrator,4,0,"I already have my developer and Production licenses for Orchestartor, from where can I download the software?",it-automation
+Get Text activity approximately taking 60 to 120 seconds when running the bot in background,1,0,"Get Text activity taking 1 to 3 minutes when the bot running background. 
+Running perfectly fine(Grabbing the test in fraction of seconds) when it runs in Studio or running while I open that host machine logged in. 
+And &hellip;",it-automation
+The process should recover and retry 2 times in case of errors in navigation,3,0,"hi, I have to request this request: &quot; The process should recover and retry 2 times in case of errors in navigation…&quot; 
+I changed the parameter MaxRetryNumber in config to 2 but it doesn’t work. Can you tell me how to hook&hellip;",it-automation
+Possibilities of UiPath methods to upload multiple files to multiple links at once,1,0,"Hi, 
+I am trying to build a robot that can give options to select files from local or cloud storage and then upload the selected files to the respective folders inside a website. 
+Please provide your suggestions on how t&hellip;",it-automation
+How to connect Azure Data Studio with UiPath Studio 2018,1,0,"I want to execute query from Azure Data Studio database, and save result table in datatable ? 
+Please help me with any package need to install.",it-automation
+Not able to run UIRobot.exe after release of new version of UIPath,7,4,"Hi, 
+I am not able to run UIPath Robot.exe after new release - 19.8.0. 
+Earlier I was able to run this robot by below my code using Command prompt. now it is not working and giving me this Error. 
+***My Code:- 
+subproces&hellip;",it-automation
+Automation in MS Project,4,2,"Hello, 
+is it possible to have the automation build on MS Project? I tried on excel activities but it’s not working as expected. 
+Any suggestions or help? 
+BR, 
+Manisha",it-automation
+UnEncountered popup issue in citrix environment,4,1,"Hi Team, 
+We have done automation of the desktop application in citrix environment.While run the Bot on stage environment,we are getting desktop application error popup which is unknown for us and it can appear in any sc&hellip;",it-automation
+I am getting error while creating terminal connection,3,0,"I Friends 
+I am getting a connection error in terminal session while creating a connection.",it-automation
+Getting values,3,1,How to get values from screen-shot which has drop down list ?,it-automation
+New Virtual Machine Old packages were not included,3,1,"Hi, we had an issue for a new remote desktop, a robot was looking for an old package and resulting to an issue, but the update only gives the new package. what would be the automatic way to download/update the local of t&hellip;",it-automation
+About the Automation Suite category,1,0,Help around our Automation Suite.,automation-suite
+"Automating Web page handling without VMs, just using DOM and HTML interpretation",5,1,"Hello 
+Im new to UiPath and im trying to find easily if its able to handle DOM/HMTL full interpretation without a VM. Allocating and deallocating VMs is a pain ,expensive and slow. 
+I would like to ask directions on the &hellip;",automation-suite
+Data Extraciton from PDF tables,5,1,"Pls elaborate the best way to extract data from row in PDFs. Here issue is multiple PDFs generates by system and number of rows in each PDF are not constant,  but COLUMNs remain same.  ROWs count changing in each PDF. BO&hellip;",automation-suite
+Can I run 3 unattended robot if I only activate 1 unattended robot at 1 time,5,1,"I have 3 unattended robots which running at different times. 
+Robot A will run only at 8-10 am 
+Robot B will run only at 12am-18am 
+Robot C will run only at 0am - 5am 
+So can I config to run 3 robots with only 1 license &hellip;",automation-suite
+Automation Suite and Openshift,13,10,"Hi Everyone, 
+I would like to ask if i can install UiPath Automation Suite with Openshift or no also what is the best practice for robots VMs is to avail detected VM for every robot or add more than one robot on the same&hellip;",automation-suite
+For read range activity,14,9,for read range activity which package need to install in ui path,automation-suite
+Failure during upgrade to 2022.10.0 (infra stage),3,1,"2022-10-07T12:27:11.4467178Z     [INFO] [2022-10-07T12:22:07+0000]: Longhorn default settings found with storageOverProvisioningPercentage set to 100
+2022-10-07T12:27:11.4470402Z     [INFO] [2022-10-07T12:22:07+0000]: In&hellip;",automation-suite
+How to connect AWS Lambda to UIPath,2,0,"Hey, can anybody help me in connecting AWS Lambda to UIPath. I want to hit the Lambda from uipath and retrieve response.",automation-suite
+Erro Login SSO Automation Hub - user domain did not match the list of configured allowed domainsallowed domains,2,0,"Guys, I have the error in the HUB using the automatic login (SSO) for all people who have the domain @usiminas.com working very well, but for the employees of one of the companies of the group with the domain @solucoesus&hellip;",automation-suite
+Reg RE Framework I need to terminate error transaction item and move to next item in queue,6,2,"About my automation -Using RE Framework I am getting input data from excel sheet and load them in queue and then executing each steps in application  . 
+Scenario 
+E.g. Let say i have 25 steps in my automation and in-betw&hellip;",automation-suite
+Can UI Path bots replace batch programs?,2,0,"Hi, 
+I am looking for a way to get rid of a few batch programs in my Web Application and use UI path. 
+I work for a large company, and we can get the enterprise license, if I can prove that this solution will save money. &hellip;",automation-suite
+Generating test report once the test execution is completed,5,2,"Hi All, 
+This might be the old topic but i find no concrete solution for the problem statement hence want to reiterate with the solution i tried. 
+I am utilizing UIPATH purely for the test automation, to automate all the&hellip;",automation-suite
+Need to Perform some steps before RE Framework start,8,4,"Hi , 
+I am new to RE Framework Automation and I want to run some Steps 
+before my RE framework automation starts . Can someone help me how we can run my Automation steps ? 
+I want to perform below one  time steps before &hellip;",automation-suite
+[Task] - How to read a Word Document and write in the Application as per certain criteria,2,0,"Prerequisite: A Schedule is given on a Weekly basis where there are security guards present on particular sites for particular times. 
+Chennai Port:  587-2076 
+CSS	Sat	Sun	Mon	Tue	Wed	Thu	Fri 
+Time/Hours	 12/03	12/04	12/&hellip;",automation-suite
+How can I extract the last row from the given data using Reg EX,7,0,"Hi All, 
+I want to extract the last row and second last row (separate) from below string using Reg-Ex 
+Delivery - Additional Information Requested - 2022-08-29 15:46:51 - a.als.a 
+Delivery - Open - 2022-09-05 09:45:54 - &hellip;",automation-suite
+Debugging Active directory integration with kerberos,2,0,"User login to Automation Suite
+When there are user login issues to Automation Suite even after following these steps, please follow the steps below to debug the issue. 
+
+Check if Kerberos is configured successfully if y&hellip;",automation-suite
+HOW TO DEVELOP BANK RECONCILIATION BOT FOR XERO,1,0,"Hello, 
+how do i build bot for xero reconciliation.",automation-suite
+How to Filter Data Table Using A List of Values,4,0,"I have a data table that I wish to Filter based on a list of Customer values. Instead of listing each customer value separately, how would I code the Filter to use “Contains” and place customer values in a List.",automation-suite
+To get count from 2 tables on specific conditions,7,3,"Hi everyone , 
+Need to fetch from database. 
+I have issue with combining the query for getting count from 2 tables… i have 2 tables, from table1 i need  to take user id as referrence and take the count from both table. I&hellip;",automation-suite
+Issue about setting Automation Suite: DNS Validation Failed from container,5,2,"Hello, 
+There is an error in the Automation Suite installation step, please help me to fix it 
+“DNS Validation Failed from container”",automation-suite
+Single Node Installation - Help,4,1,"Hello everyone :smiling_face: 
+I am facing an error during single node installation in linux machine. Help me to fix the issue. The issue details attached in below screenshot image.",automation-suite
+HOW IS AUTOMATION IMPORTANT IN AI?,3,0,"The automation is important in RPA. If it is important so how could, I use it what were the preferences of automation suite. And how to download a suite in a laptop.",automation-suite
+Automation suite deployment with azure cloud,6,2,"Hello everyone 
+does anyone have a video tutorial or a simple document that describes the steps for deploying a project on cloud azure with automation suite 
+Thank you in advance",automation-suite
+Cloud Azure deployment,4,0,"Hello 
+I want to use the automation suite to deploy my project. 
+I’m using Cloud Azure 
+Does it require the same prerequis as the on prem? 
+The picture below has prerequists are they the ones needed in Azure deployment? 
+&hellip;",automation-suite
+Apps Tab keep on loading Not Opening,1,0,"Dear Developers, 
+I have a sudden problem showing up, I am using #build:automation-suite utomation-suite and since yesterday I am not able to access Apps page rest of the things working fine (Data service, Orch. integrat&hellip;",automation-suite
+"Office 365 Application functionality test for Word, Excel, PowerPoint",1,0,"Hello, 
+I am new to UiPath. 
+I am creating Office 365 Application functionality test for Word, Excel, PowerPoint, and Outlook. Because of licensing limitation, the BOT are to be run from the studio machine to remote test&hellip;",automation-suite
+Automation Suite - Airgapped Install Restrictions in an Non-Airgapped environment,7,1,"Hi Team, 
+Quick question 
+If we do an airgapped installation in a non-airgapped environment (with internet), just for the sake of trying airgapped install procedures, can it still be considered a non-airgapped environmen&hellip;",automation-suite
+How to filter out/remove cells that contains empty,7,3,"Hello everyone, 
+I was wondering how can I filter out and remove the cells that contains empty in an excel file? 
+From 
+ 
+To 
+ 
+I have tried to use the filter wizard, but it would not filter and remove the cells out",automation-suite
+"There is an error in XML document (2,16)",3,0,"Hello, 
+I’m unable to authenticate to my work Tableau server. I used my credentials but got error 
+&#39;There is an error in XML document (2,16). I’m the first one in my office to embark on the journey to automate Tableau re&hellip;",automation-suite
+Test manager server url and api key,4,1,how can I get uipath cloud test manager server url and api key when i use azure devops uipath test-manager plugin,automation-suite
+한 번에 데이터테이블의 컬럼을 복사하는 방법,2,0,"Datatable 1 안에 있는 데이터를 Datatable 2로 복사할 때 
+필요한 컬럼만 순서를 바꿔서 한번에 가능할까요?",automation-suite
+Automation suite - Deploy issue (Online single-node evaluation installation-Basic),3,0,"Hey all ! 
+I am trying to deploy the Automation suite on the Linux machine, but I faced the below issue, appreciate any support please :grimacing: 
+Linux: RHEL 8.4: 
+Automation Suite: Manuel - Online single-node evaluati&hellip;",automation-suite

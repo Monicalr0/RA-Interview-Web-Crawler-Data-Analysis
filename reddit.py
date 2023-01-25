@@ -87,7 +87,7 @@ def export_data_concat(subreddit=["all"]):
 
 if __name__ == "__main__":
     # Scraping reddit
-    # Memebers of selected subreddits: 11.5k, 87.9k, 14.2k, 10.7k
+    # Members of selected subreddits: 11.5k, 87.9k, 14.2k, 10.7k
     subreddits = ["webscraping", 'Automate', 'Automation', 'Selenium']
     export_data_concat(subreddits)
     # for sr in subreddits:
