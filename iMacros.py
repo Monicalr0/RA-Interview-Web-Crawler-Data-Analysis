@@ -36,6 +36,7 @@ def scrape_question(href):
         # Number of posts(reply), due to special format need split
         question["PostsNum"] = q_soup.find(
             "div", class_="pagination").text.split()[0]
+        question["URL"] = q_URL
     except:
         pass
     return question
@@ -68,7 +69,7 @@ def scrape():
     Function to scrape page within given range
     """
     questions = []
-    for i in range(11, 16):
+    for i in range(1, 16):
         questions.extend(scrape_page(i))
         print("page " + str(i) + " finished scraping")
     return questions
@@ -81,7 +82,7 @@ def export_data():
     data = scrape()
     filename = "iMacro11-15.csv"
     with open(filename, "w", newline="") as data_file:
-        fieldnames = ["Title", "Description", "PostsNum"]
+        fieldnames = ["Title", "Description", "PostsNum", "URL"]
         data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
         data_writer.writeheader()
         for d in data:

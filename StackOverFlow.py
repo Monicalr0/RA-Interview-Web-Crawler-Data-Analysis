@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import csv
+import time
 
 URL = "https://stackoverflow.com/questions?"  # Default URL to scrape questions
 TAGGED_URL = "https://stackoverflow.com/questions/tagged/"
@@ -26,6 +27,7 @@ def scrape_question(href):
     Function to scrape all info about a single question.
     """
     q_URL = build_url(question_href=href)
+    time.sleep(3)  # Current naive approach to rate limit
     q_response = urlopen(q_URL)
     q_html = q_response.read()
     q_soup = BeautifulSoup(q_html)
@@ -41,6 +43,7 @@ def scrape_question(href):
             "div[title*=Viewed]").text.split()[1]
         question["Votes"] = q_soup.find(
             "div", class_="js-vote-count flex--item d-flex fd-column ai-center fc-black-500 fs-title").text
+        question["URL"] = q_URL
     except:
         pass
 
@@ -80,6 +83,7 @@ def scrape_page(page=1, tag=""):
     for q in questions_list:
         # For each question, get url to the question and scrape the actual description and answer
         question = scrape_question(href=q.a['href'])
+        question["Tag"] = tag
         page_questions.append(question)
     return page_questions
 
@@ -97,24 +101,29 @@ def scrape(tag=""):
     return questions
 
 
-def export_data(tag=""):
-    data = scrape(tag)
-    if tag:
-        filename = tag + ".csv"
-    else:
-        filename = "question.csv"
+def export_data(tags=[""]):
+    data = []
+    for t in tags:
+        data.extend(scrape(t))
+    # if tag:
+    #     filename = tag + ".csv"
+    # else:
+    #     filename = "question.csv"
+    filename = "StackOverFlow3.csv"
     with open(filename, "w", newline="") as data_file:
-        fieldnames = ["Title", "Description", "Views", "Votes", "Answers"]
+        fieldnames = ["Title", "Description",
+                      "Views", "Votes", "Answers", "URL", "Tag"]
         data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
         data_writer.writeheader()
         for d in data:
             data_writer.writerow(d)
-    print("Export tag: " + tag + " finished")
+    # print("Export tag: " + tag + " finished")
 
 
 if __name__ == "__main__":
-    # Scraping Stackoverflow using existing tags related to web automation, ui automation, data scraping etc.
-    #tags = ["ui-automation", "webautomation", "web-scraping"]
-    tags = ["automation", "screen-scraping", "web-crawler"]
-    for t in tags:
-        export_data(t)
+    # Scraping Stackoverflow using existing tags related to web automation etc.
+    # Naive approach to rate limit: run the tags separately :D
+    # tags = ["ui-automation", "webautomation"]
+    # tags = ["web-scraping", "automation"]
+    tags = ["screen-scraping", "web-crawler"]
+    export_data(tags)

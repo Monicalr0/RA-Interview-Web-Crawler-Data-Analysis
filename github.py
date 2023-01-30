@@ -43,6 +43,8 @@ def scrape(topic=""):
         else:
             repo["Description"] = ""
         repo["Topic"] = topic
+        repo["URL"] = "https://github.com/" + r.div.div.div.h3.findChildren(
+            "a")[1]["href"]
         repositories.append(repo)
 
     return repositories
@@ -72,6 +74,7 @@ def scrape_search(keywords=""):
                 repo["Stars"] = r["stargazers_count"]
                 repo["Language"] = r["language"]
                 repo["search"] = keywords
+                repo["URL"] = r["html_url"]
                 repos.append(repo)
         except:
             continue
@@ -88,7 +91,7 @@ def export_data(topics=[], keywords=[]):
             data.extend(scrape(t))
         filename = "github.csv"
         with open(filename, "w", newline="") as data_file:
-            fieldnames = ["Title", "Description", "Topic"]
+            fieldnames = ["Title", "Description", "Topic", "URL"]
             data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
             data_writer.writeheader()
             for d in data:
@@ -100,7 +103,7 @@ def export_data(topics=[], keywords=[]):
         filename = "github_search.csv"
         with open(filename, "w", newline="") as data_file:
             fieldnames = ["Title", "Description",
-                          "Topics", "Stars", "Language", "search"]
+                          "Topics", "Stars", "Language", "search", "URL"]
             data_writer = csv.DictWriter(data_file, fieldnames=fieldnames)
             data_writer.writeheader()
             for d in data:
@@ -110,15 +113,10 @@ def export_data(topics=[], keywords=[]):
 
 if __name__ == "__main__":
     # Scraping Github TOP 20 Repo for each topic.
-    topics = ["workflow-automation", "process-automation", "automation",
-              "scraping", "crawling", "crawler", "scraping-websites"]
+    # topics = ["workflow-automation", "process-automation", "automation",
+    #           "scraping", "crawling", "crawler", "scraping-websites"]
     # export_data(topics)
-    # Not using full word
-    # keywords = ["automation"]
+
+    # Scraping Github TOP 100 Repo for each search keywords
     keywords = ["automation", "crawler", "scraping", "crawling", "spider"]
     export_data(keywords=keywords)
-
-    # i = 1
-    # url = build_url(page=i, search=keywords)
-    # response = requests.get(url)
-    # print(response.apparent_encoding)

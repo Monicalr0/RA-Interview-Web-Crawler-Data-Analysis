@@ -1,0 +1,141 @@
+Title,Description,Topic,URL
+n8n,Free and source-available fair-code licensed workflow automation tool. Easily automate tasks across different services.,workflow-automation,https://github.com//n8n-io/n8n
+conductor,Conductor is a microservices orchestration engine.,workflow-automation,https://github.com//Netflix/conductor
+cadence,"Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.",workflow-automation,https://github.com//uber/cadence
+dagster,"An orchestration platform for the development, production, and observation of data assets.",workflow-automation,https://github.com//dagster-io/dagster
+temporal,Temporal service,workflow-automation,https://github.com//temporalio/temporal
+lowdefy,"An open-source, self-hosted, low-code framework to build internal tools, web apps, admin panels, BI dashboards, workflows, and CRUD apps with YAML or JSON.",workflow-automation,https://github.com//lowdefy/lowdefy
+argo-events,Event-driven automation framework,workflow-automation,https://github.com//argoproj/argo-events
+doit,task management & automation tool,workflow-automation,https://github.com//pydoit/doit
+utask,碌Task is an automation engine that models and executes business processes declared in yaml. 鉁忥笍馃搵,workflow-automation,https://github.com//ovh/utask
+obsei,"Obsei is a low code AI powered automation tool. It can be used in various business flows like social listening, AI based alerting, brand image analysis, comparative study and more .",workflow-automation,https://github.com//obsei/obsei
+couler,"Unified Interface for Constructing and Managing Workflows on different workflow engines, such as Argo Workflows, Tekton Pipelines, and Apache Airflow.",workflow-automation,https://github.com//couler-proj/couler
+daml,The Daml smart contract language,workflow-automation,https://github.com//digital-asset/daml
+gh-action-pypi-publish,"GitHub Action, for publishing distribution files to PyPI: https://github.com/marketplace/actions/pypi-publish",workflow-automation,https://github.com//pypa/gh-action-pypi-publish
+mergeable,馃 All the missing GitHub automation 馃檪 馃檶 ,workflow-automation,https://github.com//mergeability/mergeable
+TACTIC,Open source remote collaboration platform used for configuring and deploying enterprise Workflow solutions.,workflow-automation,https://github.com//Southpaw-TACTIC/TACTIC
+odin,"A programmable, observable and distributed job orchestration system.",workflow-automation,https://github.com//theycallmemac/odin
+temporalite,An experimental distribution of Temporal that runs as a single process,workflow-automation,https://github.com//temporalio/temporalite
+Dynamics-365-Workflow-Tools,Dynamics 365 Workflow Tools is a Community solution that expands Microsoft Dynamics 365 (CRM) Workflow features with lots of new posibilities. This helps you to build very advanced Codeless solutions in CRM.,workflow-automation,https://github.com//demianrasko/Dynamics-365-Workflow-Tools
+streamsheets,An open-source tool for processing stream data using a spreadsheet-like interface.,workflow-automation,https://github.com//eclipse/streamsheets
+sdk-go,Temporal Go SDK,workflow-automation,https://github.com//temporalio/sdk-go
+obsei,"Obsei is a low code AI powered automation tool. It can be used in various business flows like social listening, AI based alerting, brand image analysis, comparative study and more .",process-automation,https://github.com//obsei/obsei
+process-automation-enablement,This repository contains content for SAP Process Automation trainings.,process-automation,https://github.com//SAP-samples/process-automation-enablement
+werk24-python,Automated Processing of Technical Drawings,process-automation,https://github.com//W24-Service-GmbH/werk24-python
+HVAC-Building-and-Process-Automation,"The library product HVAC Building & Process Automation SL for CODESYS contains functional components and HTML5 system macros for the creation of e.g. heating and ventilation systems, but also for room automation and other industrial system technology.",process-automation,https://github.com//HVAC-By-Pfaender/HVAC-Building-and-Process-Automation
+Bathytools,"Tools for navigationally safe bathymetric surface processing - Rolling Coin algorithm, iterative Laplacian smoothing, shoal buffering and surface offsetting. Efficient implementations written in C. Simple command-line interface to support scripting use.",process-automation,https://github.com//tfilppula/Bathytools
+automation-protocols-metadata,"JSON file that contains an update metadata of Automation Protocols (Industrial control system, process automation, building automation, automatic meter reading, and automobile)",process-automation,https://github.com//qeeqbox/automation-protocols-metadata
+camunda-demo,camunda-demo,process-automation,https://github.com//LLLLimbo/camunda-demo
+opal-node-red,A fork of the node-red project with changes needed for the OPAL framework,process-automation,https://github.com//telligro/opal-node-red
+opal-nodes,"Nodes that are used by the OPAL framework to automate user activity for different types of resources such UI, Excel, PDF etc.",process-automation,https://github.com//telligro/opal-nodes
+digidroplet-controller,DigitalOcean API Controller,process-automation,https://github.com//ButrintKomoni/digidroplet-controller
+redux,Bacterial phenotype prediction from low pass sequencing using recommender systems and machine learning classifiers.,process-automation,https://github.com//jw44lavo/redux
+spothole.authority,"Spothole (Authority App) - Artificial Intelligence Powered Pothole Detection, Reporting and Management Solution",process-automation,https://github.com//nirbhayph/spothole.authority
+GoFarmTech,GoFarmTech Arduino based Framework for developing agriculture/industry processes automation devices.,process-automation,https://github.com//bratello/GoFarmTech
+ReviewBuddy,ReviewBuddy is a Bonita BPM App that automates Review Processes,process-automation,https://github.com//Ilagouilly/ReviewBuddy
+opal-setup,"The setup module for the OPAL framework. Installs opal-node-red, the fork of node-red used by OPAL and set of nodes that are part of the OPAL framework",process-automation,https://github.com//telligro/opal-setup
+mabiesen.github.io,,process-automation,https://github.com//mabiesen/mabiesen.github.io
+haskell,Colonies SDK in Haskell,process-automation,https://github.com//colonyos/haskell
+cv-skills-updator,Moved to GitLab. A script for updating CV with data from skills tracking table,process-automation,https://github.com//OlehKurachenko/cv-skills-updator
+LinkedInProfileViewer,This tool automates linked-in profile views using a excel sheet with profile url's,process-automation,https://github.com//appumistri/LinkedInProfileViewer
+VBA_Misc_Macros,This repo will contain various small macros and use cases i've implemented for my current work in order to speed up the process,process-automation,https://github.com//theOther-Paul/VBA_Misc_Macros
+puppeteer,Headless Chrome Node.js API,automation,https://github.com//puppeteer/puppeteer
+playwright,"Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",automation,https://github.com//microsoft/playwright
+huginn,Create agents that monitor and act on your behalf. Your agents are standing by!,automation,https://github.com//huginn/huginn
+fastlane,馃殌 The easiest way to automate building and releasing your iOS and Android apps,automation,https://github.com//fastlane/fastlane
+phantomjs,Scriptable Headless Browser,automation,https://github.com//ariya/phantomjs
+n8n,Free and source-available fair-code licensed workflow automation tool. Easily automate tasks across different services.,automation,https://github.com//n8n-io/n8n
+vagrant,Vagrant is a tool for building and distributing development environments.,automation,https://github.com//hashicorp/vagrant
+appsmith,"Low code project to build admin panels, internal tools, and dashboards. Integrates with 15+ databases and any API.",automation,https://github.com//appsmithorg/appsmith
+Tasmota,"Alternative firmware for ESP8266 with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at",automation,https://github.com//arendst/Tasmota
+semantic-release,馃摝馃殌 Fully automated version management and package publishing,automation,https://github.com//semantic-release/semantic-release
+appium,Cross-platform automation framework for all kinds of your apps built on top of W3C WebDriver protocol,automation,https://github.com//appium/appium
+InstaPy,馃摲 Instagram Bot - Tool for automated Instagram interactions,automation,https://github.com//InstaPy/InstaPy
+watchtower,A process for automating Docker container base image updates. ,automation,https://github.com//containrrr/watchtower
+Auto.js,Automation&Workflow JavaScript IDE on Android(瀹夊崜骞冲彴涓婄殑鑷姩鍖栧伐浣滄祦JavaScript IDE),automation,https://github.com//hyb1996/Auto.js
+awx,"AWX provides a web-based user interface, REST API, and task engine built on top of Ansible. It is one of the upstream projects for Red Hat Ansible Automation Platform.",automation,https://github.com//ansible/awx
+leon,馃 Leon is your open-source personal assistant.,automation,https://github.com//leon-ai/leon
+prefect,The easiest way to coordinate your dataflow,automation,https://github.com//PrefectHQ/prefect
+Detox,Gray box end-to-end testing and automation framework for mobile apps,automation,https://github.com//wix/Detox
+hammerspoon,Staggeringly powerful macOS desktop automation with Lua,automation,https://github.com//Hammerspoon/hammerspoon
+PHP_CodeSniffer,PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.,automation,https://github.com//squizlabs/PHP_CodeSniffer
+scrapy,"Scrapy, a fast high-level web crawling & scraping framework for Python.",scraping,https://github.com//scrapy/scrapy
+colly,Elegant Scraper and Crawler Framework for Golang,scraping,https://github.com//gocolly/colly
+requests-html,Pythonic HTML Parsing for Humans鈩?scraping,,https://github.com//psf/requests-html
+webmagic,A scalable web crawler framework for Java.,scraping,https://github.com//code4craft/webmagic
+crawlee,Crawlee鈥擜 web scraping and browser automation library for Node.js that helps you build reliable crawlers. Fast.,scraping,https://github.com//apify/crawlee
+tabula,Tabula is a tool for liberating data tables trapped inside PDF files,scraping,https://github.com//tabulapdf/tabula
+awesome-web-scraping,"List of libraries, tools and APIs for web scraping and data processing.",scraping,https://github.com//lorien/awesome-web-scraping
+headless-chrome-crawler,Distributed crawler powered by Headless Chrome,scraping,https://github.com//yujiosaka/headless-chrome-crawler
+ferret,Declarative web scraping,scraping,https://github.com//MontFerret/ferret
+autoscraper,"A Smart, Automatic, Fast and Lightweight Web Scraper for Python",scraping,https://github.com//alirezamika/autoscraper
+mechanize,Mechanize is a ruby library that makes automated web interaction easy.,scraping,https://github.com//sparklemotion/mechanize
+undetected-chromedriver,Custom Selenium Chromedriver | Zero-Config | Passes ALL bot mitigation systems (like Distil / Imperva/ Datadadome / CloudFlare IUAM),scraping,https://github.com//ultrafunkamsterdam/undetected-chromedriver
+Data-science,"Collection of useful data science topics along with articles, videos, and code",scraping,https://github.com//khuyentran1401/Data-science
+fake-useragent,Up-to-date simple useragent faker with real world database,scraping,https://github.com//fake-useragent/fake-useragent
+Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE,"Do you want to LEARN NEW STUFF for FREE? Don't worry, with the power of web-scraping and automation, this script will find the necessary Udemy coupons & enroll you for PAID UDEMY COURSES, ABSOLUTELY FREE!",scraping,https://github.com//aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE
+panther,A browser testing and web crawling library for PHP and Symfony,scraping,https://github.com//symfony/panther
+GoogleScraper,"A Python module to scrape several search engines (like Google, Yandex, Bing, Duckduckgo, ...). Including asynchronous networking support.",scraping,https://github.com//NikolaiT/GoogleScraper
+thal,Getting started with Puppeteer and Chrome Headless for Data Mining,scraping,https://github.com//emadehsan/thal
+grab,Web Scraping Framework,scraping,https://github.com//lorien/grab
+awesome-puppeteer,A curated list of awesome puppeteer resources.,scraping,https://github.com//transitive-bullshit/awesome-puppeteer
+scrapy,"Scrapy, a fast high-level web crawling & scraping framework for Python.",crawling,https://github.com//scrapy/scrapy
+colly,Elegant Scraper and Crawler Framework for Golang,crawling,https://github.com//gocolly/colly
+newspaper,"News, full-text, and article metadata extraction in Python 3. Advanced docs:",crawling,https://github.com//codelucas/newspaper
+crawlee,Crawlee鈥擜 web scraping and browser automation library for Node.js that helps you build reliable crawlers. Fast.,crawling,https://github.com//apify/crawlee
+awesome-web-scraping,"List of libraries, tools and APIs for web scraping and data processing.",crawling,https://github.com//lorien/awesome-web-scraping
+headless-chrome-crawler,Distributed crawler powered by Headless Chrome,crawling,https://github.com//yujiosaka/headless-chrome-crawler
+ferret,Declarative web scraping,crawling,https://github.com//MontFerret/ferret
+hakrawler,"Simple, fast web crawler designed for easy, quick discovery of endpoints and assets within a web application",crawling,https://github.com//hakluke/hakrawler
+rod,A Devtools driver for web automation and scraping,crawling,https://github.com//go-rod/rod
+nutch,Apache Nutch is an extensible and scalable web crawler,crawling,https://github.com//apache/nutch
+grab,Web Scraping Framework,crawling,https://github.com//lorien/grab
+awesome-puppeteer,A curated list of awesome puppeteer resources.,crawling,https://github.com//transitive-bullshit/awesome-puppeteer
+skycaiji,钃濆ぉ閲囬泦鍣ㄦ槸涓€娆惧紑婧愬厤璐圭殑鐖櫕绯荤粺锛屼粎闇€鐐归€夌紪杈戣鍒欏嵆鍙噰闆嗘暟鎹紝鍙繍琛屽湪鏈湴銆佽櫄鎷熶富鏈烘垨浜戞湇鍔″櫒涓紝鍑犱箮鑳介噰闆嗘墍鏈夌被鍨嬬殑缃戦〉锛屾棤缂濆鎺ュ悇绫籆MS寤虹珯绋嬪簭锛屽厤鐧诲綍瀹炴椂鍙戝竷鏁版嵁锛屽叏鑷姩鏃犻渶浜哄伐骞查锛佹槸缃戦〉澶ф暟鎹噰闆嗚蒋浠朵腑瀹屽叏璺ㄥ钩鍙扮殑浜戠鐖櫕绯荤粺,crawling,https://github.com//zorlan/skycaiji
+core,The complete web scraping toolkit for PHP.,crawling,https://github.com//roach-php/core
+mlscraper,馃 Scrape data from HTML websites automatically by just providing examples,crawling,https://github.com//lorey/mlscraper
+Lulu,[Unmaintained] A simple and clean video/music/image downloader 馃懢,crawling,https://github.com//iawia002/Lulu
+scrapy-selenium,Scrapy middleware to handle javascript pages using selenium,crawling,https://github.com//clemfromspace/scrapy-selenium
+scrapyrt,HTTP API for Scrapy spiders ,crawling,https://github.com//scrapinghub/scrapyrt
+bhban_rpa,"<6臧滌洈 旃?鞐呺毳?頃橂（ 毵岇棎 雭濍偞電?鞐呺 鞛愲彊頇?靸濍姤於滍寪靷? 2020)>鞚?鞓堨牅 旖旊摐鞛呺媹雼? 韺岇澊鞃潉 頃?氩堧弰 氚办泴氤?鞝?鞐嗠姅 攵勲摛鞚?鞙勴暅 鞓堨牅鞚措┌, 鞐戩厐攵€韯?霐旍瀽鞚? 毵ろ伂搿? 韥·毵侁箤歆€ 鞐呺 鞛愲彊頇旍檧 甏€霠悳 雼れ枒頃?攵勳暭 鞓堨牅臧€ 鞝滉车霅╇媹雼?",crawling,https://github.com//needleworm/bhban_rpa
+easy-scraping-tutorial,Simple but useful Python web scraping tutorial code. ,crawling,https://github.com//MorvanZhou/easy-scraping-tutorial
+scrapy,"Scrapy, a fast high-level web crawling & scraping framework for Python.",crawler,https://github.com//scrapy/scrapy
+lux,馃懢 Fast and simple video download library and CLI tool written in Go,crawler,https://github.com//iawia002/lux
+colly,Elegant Scraper and Crawler Framework for Golang,crawler,https://github.com//gocolly/colly
+proxy_pool,Python鐖櫕浠ｇ悊IP姹?proxy pool),crawler,https://github.com//jhao104/proxy_pool
+pyspider,A Powerful Spider(Web Crawler) System in Python.,crawler,https://github.com//binux/pyspider
+newspaper,"News, full-text, and article metadata extraction in Python 3. Advanced docs:",crawler,https://github.com//codelucas/newspaper
+examples-of-web-crawlers,"涓€浜涢潪甯告湁瓒ｇ殑python鐖櫕渚嬪瓙,瀵规柊鎵嬫瘮杈冨弸濂?涓昏鐖彇娣樺疂銆佸ぉ鐚€佸井淇°€佸井淇¤涔︺€佽眴鐡ｃ€丵Q绛夌綉绔欍€?Some interesting examples of python crawlers that are friendly to beginners. )",crawler,https://github.com//shengqiangzhang/examples-of-web-crawlers
+webmagic,A scalable web crawler framework for Java.,crawler,https://github.com//code4craft/webmagic
+crawlab,Distributed web crawler admin platform for spiders management regardless of languages and frameworks. 鍒嗗竷寮忕埇铏鐞嗗钩鍙帮紝鏀寔浠讳綍璇█鍜屾鏋?crawler,,https://github.com//crawlab-team/crawlab
+Photon,Incredibly fast crawler designed for OSINT.,crawler,https://github.com//s0md3v/Photon
+avbook,"AV 鐢靛奖绠＄悊绯荤粺锛?avmoo , javbus , javlibrary 鐖櫕锛岀嚎涓?AV 褰辩墖鍥句功棣嗭紝AV 纾佸姏閾炬帴鏁版嵁搴擄紝Japanese Adult Video Library,Adult Video Magnet Links - Japanese Adult Video Database",crawler,https://github.com//guyueyingmu/avbook
+Python,Python鑴氭湰銆傛ā鎷熺櫥褰曠煡涔庯紝 鐖櫕锛屾搷浣渆xcel锛屽井淇″叕浼楀彿锛岃繙绋嬪紑鏈?crawler,,https://github.com//injetlee/Python
+spider-flow,鏂颁竴浠ｇ埇铏钩鍙帮紝浠ュ浘褰㈠寲鏂瑰紡瀹氫箟鐖櫕娴佺▼锛屼笉鍐欎唬鐮佸嵆鍙畬鎴愮埇铏€?crawler,,https://github.com//ssssssss-team/spider-flow
+crawlee,Crawlee鈥擜 web scraping and browser automation library for Node.js that helps you build reliable crawlers. Fast.,crawler,https://github.com//apify/crawlee
+node-crawler,Web Crawler/Spider for NodeJS + server-side jQuery ;-),crawler,https://github.com//bda-research/node-crawler
+awesome-web-scraping,"List of libraries, tools and APIs for web scraping and data processing.",crawler,https://github.com//lorien/awesome-web-scraping
+WechatSogou,鍩轰簬鎼滅嫍寰俊鎼滅储鐨勫井淇″叕浼楀彿鐖櫕鎺ュ彛,crawler,https://github.com//chyroc/WechatSogou
+katana,A next-generation crawling and spidering framework.,crawler,https://github.com//projectdiscovery/katana
+awesome-crawler,"A collection of awesome web crawler,spider in different languages",crawler,https://github.com//BruceDone/awesome-crawler
+headless-chrome-crawler,Distributed crawler powered by Headless Chrome,crawler,https://github.com//yujiosaka/headless-chrome-crawler
+ferret,Declarative web scraping,scraping-websites,https://github.com//MontFerret/ferret
+cloudflare-scrape,A Python module to bypass Cloudflare's anti-bot page.,scraping-websites,https://github.com//Anorov/cloudflare-scrape
+Edu-Mail-Generator,Generate Free Edu Mail(s) within minutes,scraping-websites,https://github.com//AmmeySaini/Edu-Mail-Generator
+thal,璇戞枃锛歅uppeteer 涓?Chrome Headless 鈥斺€?浠庡叆闂ㄥ埌鐖櫕,scraping-websites,https://github.com//csbun/thal
+crawly,"Crawly, a high-level web crawling & scraping framework for Elixir. ",scraping-websites,https://github.com//elixir-crawly/crawly
+Python_and_the_Web,"Build Bots, Scrape a website or use an API to solve a problem.",scraping-websites,https://github.com//Python-World/Python_and_the_Web
+dataflowkit,Extract structured data from web sites. Web sites scraping. ,scraping-websites,https://github.com//slotix/dataflowkit
+sarenka,"OSINT tool - gets data from services like shodan, censys etc. in one app",scraping-websites,https://github.com//pawlaczyk/sarenka
+python-automation-scripts,Simple yet powerful automation stuffs.,scraping-websites,https://github.com//avidLearnerInProgress/python-automation-scripts
+tinking,"馃Ф Extract data from any website without code, just clicks.",scraping-websites,https://github.com//baptisteArno/tinking
+PHPScraper,A universal web-util for PHP.,scraping-websites,https://github.com//spekulatius/PHPScraper
+linkedin-profile-scraper,馃暤锔忊€嶁檪锔?LinkedIn profile scraper returning structured profile data in JSON. Works in 2020.,scraping-websites,https://github.com//jvandenaardweg/linkedin-profile-scraper
+gophie,An Aggregator Engine for searching and downloading movies free - NO ADs!,scraping-websites,https://github.com//Go-phie/gophie
+requests-html,Pythonic HTML Parsing for Humans鈩?scraping-websites,,https://github.com//kennethreitz/requests-html
+web-scraping,More than 50 web scraping examples using: Requests | Scrapy | Selenium | LXML | BeautifulSoup,scraping-websites,https://github.com//lkuffo/web-scraping
+pupflare,A webpage proxy that request through Chromium (puppeteer) - can be used to bypass Cloudflare anti bot / anti ddos on any application (like curl),scraping-websites,https://github.com//unixfox/pupflare
+CloudflareSolverRe,Cloudflare Javascript & reCaptcha challenge (I'm Under Attack Mode or IUAM) solving / bypass .NET Standard library.,scraping-websites,https://github.com//RyuzakiH/CloudflareSolverRe
+Email-extractor,The main functionality is to extract all the emails from one or several URLs - La funcionalidad principal es extraer todos los correos electr贸nicos de una o varias Url,scraping-websites,https://github.com//DiegoCaraballo/Email-extractor
+ebayMarketAnalyzer,"Scrape all eBay sold listings to determine average/median pricing, plot listings over time with trend lines, and extract to excel",scraping-websites,https://github.com//driscoll42/ebayMarketAnalyzer
+seleniumcrawler,An example using Selenium webdrivers for python and Scrapy framework to create a web scraper to crawl an ASP site,scraping-websites,https://github.com//voliveirajr/seleniumcrawler
