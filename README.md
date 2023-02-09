@@ -1,9 +1,9 @@
 # RA-Interview-Web-Crawler-Data-Analysis
 
-Use **python main.py** to run crawler. For detail please checkout the demo video. 
+Use **python {website_name}.py** to run crawler. For detail please checkout the demo video. 
 
 DiLogics RA Interview Tasks
-						Minyi Ma
+			
 Researched Questions: 
 The analysis uses data of TOP 100 questions scraped from StackOverflow under tag “ui-automation”, “web automation” and “web-scraping” (100 questions for each tag with answer, description, vote and view, sorted by frequency.
 
@@ -22,10 +22,8 @@ In more complex cases, the edge case condition when trying to filter, check exis
 
 The third type is most observed cases as people usually have done some trials, then they are stuck at certain edge cases when following the tutorial or documentation, then trying to seek help. In this case, people have more specific goals and conditions, they already know the type of website/data they’re dealing with, the function they’re using, the specific data type they want to filter or check existence etc.
 
-
-
 Attachments:
 
-Use this link to view the filtered data: https://colab.research.google.com/drive/1iZ5fbJ0LeHDOlZ2MtM46UTan_bYImMIH?usp=sharing 
+Use this link to view the filtered data for Explorative Data Analysis: https://colab.research.google.com/drive/1iZ5fbJ0LeHDOlZ2MtM46UTan_bYImMIH?usp=sharing 
 
 Demo Video: https://drive.google.com/file/d/1D7C5vNenWgArELNe2B-IcmJPNdrmAUsu/view?usp=sharing 
